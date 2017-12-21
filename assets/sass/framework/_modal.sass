@@ -220,3 +220,20 @@ body
         width: 1000px
         padding-top: 40px
         padding-bottom: 40px
+
+    .controlesslider
+        &>a
+            float: left
+            svg
+                height: 20px
+                width: 20px
+            &.anterior-controlesslider
+                svg
+                    @include prefix(transform, rotate(180deg), webkit ms moz o)
+        .paginacao-controlesslider
+            float: left
+            li
+                float: left
+                a
+                    &.flex-active
+                        color: #FFF

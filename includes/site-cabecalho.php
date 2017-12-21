@@ -19,11 +19,3 @@
         </nav>
     </div>
 </header>
-
-<div class="banner">
-    <div class="table">
-        <div class="cell-table">
-            <p>Banner</p>
-        </div>
-    </div>
-</div>

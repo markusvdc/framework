@@ -582,6 +582,23 @@ body.mascaraaberta {
       width: 1000px;
       padding-top: 40px;
       padding-bottom: 40px; } }
+  .wrap-slidermodal .controlesslider > a {
+    float: left; }
+    .wrap-slidermodal .controlesslider > a svg {
+      height: 20px;
+      width: 20px; }
+    .wrap-slidermodal .controlesslider > a.anterior-controlesslider svg {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
+  .wrap-slidermodal .controlesslider .paginacao-controlesslider {
+    float: left; }
+    .wrap-slidermodal .controlesslider .paginacao-controlesslider li {
+      float: left; }
+      .wrap-slidermodal .controlesslider .paginacao-controlesslider li a.flex-active {
+        color: #FFF; }
 
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
   .campos .grupo-campos {
@@ -636,8 +653,7 @@ body.mascaraaberta {
     width: 50px;
     right: 0;
     top: 0;
-    bottom: 0;
-    background: #FFF; }
+    bottom: 0; }
     .introformulario .select .campo-select .seta-campo-select svg {
       width: 15px;
       height: 9px;
@@ -893,9 +909,25 @@ body {
 .intropadrao .botoes-intropadrao {
   margin-top: 20px; }
 
-.introslider .controlesslider > a svg {
-  height: 20px;
-  width: 20px; }
+.introslider {
+  margin-top: 50px; }
+  .introslider .controlesslider > a {
+    float: left; }
+    .introslider .controlesslider > a svg {
+      height: 20px;
+      width: 20px; }
+    .introslider .controlesslider > a.anterior-controlesslider svg {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
+  .introslider .controlesslider .paginacao-controlesslider {
+    float: left; }
+    .introslider .controlesslider .paginacao-controlesslider li {
+      float: left; }
+      .introslider .controlesslider .paginacao-controlesslider li a.flex-active {
+        color: #fd4577; }
 
 .introformulario .campos {
   width: 50%; }
@@ -967,40 +999,39 @@ body {
         display: block;
         color: #fd4577; }
 
-main {
-  margin-top: 20px; }
+@media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
+  .introgaleria .lista-fotos li {
+    margin-bottom: 10px; } }
+@media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
+  .introgaleria .lista-fotos li {
+    margin-bottom: 20px; } }
+@media (min-width: 1400px) {
+  .introgaleria .lista-fotos li {
+    margin-bottom: 20px; } }
+.introgaleria .lista-fotos li .box-lista-fotos {
+  overflow: hidden; }
+.introgaleria .lista-fotos li img {
+  cursor: pointer;
+  height: auto; }
 
-.fotos {
-  background: #e1e1e1; }
-  .fotos h2::before {
-    background: #ffc220; }
-  @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-    .fotos .lista-fotos li {
-      margin-bottom: 10px; } }
-  @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-    .fotos .lista-fotos li {
-      margin-bottom: 20px; } }
-  @media (min-width: 1400px) {
-    .fotos .lista-fotos li {
-      margin-bottom: 20px; } }
-  .fotos .lista-fotos li .box-lista-fotos {
-    overflow: hidden; }
-  .fotos .lista-fotos li img {
-    cursor: pointer;
-    height: auto; }
+.naoIE .efeitozoom figure {
+  overflow: hidden; }
   @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-    .naoIE .fotos .lista-fotos li img {
+    .naoIE .efeitozoom figure img {
       -webkit-transition: transform 0.5s;
       -ms-transition: transform 0.5s;
       -moz-transition: transform 0.5s;
       -o-transition: transform 0.5s;
       transition: transform 0.5s; } }
   @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-    .naoIE .fotos .lista-fotos li:hover img {
+    .naoIE .efeitozoom figure:hover img {
       -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
       -moz-transform: scale(1.05);
       -o-transform: scale(1.05);
       transform: scale(1.05); } }
+
+.introabas .menu-abas li {
+  display: inline-block; }
 
 /*# sourceMappingURL=introducao.css.map */

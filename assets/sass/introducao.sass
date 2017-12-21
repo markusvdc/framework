@@ -11,11 +11,23 @@ body
         margin-top: 20px
 
 .introslider
+    margin-top: 50px
     .controlesslider
         &>a
+            float: left
             svg
                 height: 20px
                 width: 20px
+            &.anterior-controlesslider
+                svg
+                    @include prefix(transform, rotate(180deg), webkit ms moz o)
+        .paginacao-controlesslider
+            float: left
+            li
+                float: left
+                a
+                    &.flex-active
+                        color: $cor1
 
 .introformulario
     .campos
@@ -83,15 +95,7 @@ body
                 display: block
                 color: $cor1
 
-main
-    margin-top: 20px
-
-.fotos
-    background: #e1e1e1
-    // display: none
-    h2
-        &::before
-            background: #ffc220
+.introgaleria
     .lista-fotos
         li
             @media #{$celular}, #{$celularh}
@@ -105,12 +109,20 @@ main
             img
                 cursor: pointer
                 height: auto
-        .naoIE &
-            li
+
+.efeitozoom
+    .naoIE &
+        figure
+            overflow: hidden
+            img
+                @media #{$notebook}, #{$desktop}
+                    @include prefix(transition, transform 0.5s, webkit ms moz o)
+            &:hover
                 img
                     @media #{$notebook}, #{$desktop}
-                        @include prefix(transition, transform 0.5s, webkit ms moz o)
-                &:hover
-                    img
-                        @media #{$notebook}, #{$desktop}
-                            @include prefix(transform, scale(1.05), webkit ms moz o)
+                        @include prefix(transform, scale(1.05), webkit ms moz o)
+
+.introabas
+    .menu-abas
+        li
+            display: inline-block

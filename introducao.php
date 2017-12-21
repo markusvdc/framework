@@ -9,48 +9,52 @@
     ?>
 
     <main>
-        <div class="introbanner intropadrao">
-            <div class="container">
-                <p>Função para transformar a altura da div para a mesma altura da tela. (Mínimo 500px)</p>
-                <div class="botoes-intropadrao">
-                    <button id="testeBanner" class="botao1" type="button" name="button">Testar</button>
+
+        <!-- <div class="banner banneraltura">
+            <div class="table">
+                <div class="cell-table">
+                    <p>Banner com altura da tela menos cabeçalho</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="introslider intropadrao">
-            <div class="slider-lista-reservas">
-                <div class="slider">
-                    <ul class="lista-slider">
-                        <?php for($i = 0; $i < 3; $i++) { ?>
+            <div class="container">
+                <div class="slider-lista-reservas">
+                    <div class="slider">
+                        <ul class="lista-slider">
+                            <?php for($i = 0; $i < 3; $i++) { ?>
 
-                        <li class="item-lista-slider">
-                            <img src="assets/img/foto1.jpg" alt="" style="width: 100%;">
-                        </li>
+                            <li class="item-lista-slider">
+                                <img src="assets/img/foto1.jpg" alt="" style="width: 100%;">
+                            </li>
 
-                        <li class="item-lista-slider">
-                            <img src="assets/img/foto2.jpg" alt="" style="width: 100%;">
-                        </li>
+                            <li class="item-lista-slider">
+                                <img src="assets/img/foto2.jpg" alt="" style="width: 100%;">
+                            </li>
 
-                        <?php } ?>
-                    </ul>
-                </div>
-                <div class="controlesslider">
-                    <a href="#" class="anterior-controlesslider flex-prev"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
-                    <div class="paginacao-controlesslider"></div>
-                    <a href="#" class="proximo-controlesslider flex-next"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                    <div class="controlesslider">
+                        <a href="#" class="anterior-controlesslider flex-prev"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
+                        <div class="paginacao-controlesslider"></div>
+                        <a href="#" class="proximo-controlesslider flex-next"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container">
+
+        <!-- <div class="container">
             <div id="verificaBrowser">
 
             </div>
-        </div>
+        </div> -->
 
         <section class="">
             <div class="container">
+                <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <button id="testeMensagem" class="botao1" type="button" name="button">Mensagem</button>
                 <button class="botao1 abreVideo" type="button" name="button" data-video="VOa4XcXN0r0">Vídeo</button>
                 <button id="testeCarregar" class="botao1" type="button" name="button">Carregar</button>
@@ -61,18 +65,18 @@
         <div class="secao1 espacamento1">
             <div class="container">
                 <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
-                <div class="row">
+                <div class="row efeitozoom">
                     <div class="desk4 pad-row">
                         <figure>
                             <img src="assets/img/foto1.jpg" class="abreimagem" alt="" data-imagem="assets/img/foto1.jpg" data-classes="testeclass" data-legenda="Este texto é a <em>legenda</em> da imagem">
-                            <figcaption>Imagem <strong>com</strong> legenda no modal</figcaption>
                         </figure>
+                        <figcaption>Imagem <strong>com</strong> legenda no modal</figcaption>
                     </div>
                     <div class="desk4 pad-row">
                         <figure>
                             <img src="assets/img/foto2.jpg" class="abreimagem" alt="" data-imagem="assets/img/foto2.jpg">
-                            <figcaption>Imagem <strong>sem</strong> legenda no modal</figcaption>
                         </figure>
+                        <figcaption>Imagem <strong>sem</strong> legenda no modal</figcaption>
                     </div>
                 </div>
             </div>
@@ -161,7 +165,7 @@
             </div>
         </section>
 
-        <section class="secao5 espacamento1">
+        <section class="introabas">
             <div class="container">
                 <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <div class="abas">
@@ -224,7 +228,7 @@
             </div>
         </section> -->
 
-        <section class="secao7 espacamento1">
+        <!-- <section class="secao7 espacamento1">
             <div class="container">
                 <div class="select select1 placeholder inativo">
                     <select name="" id="" disabled>
@@ -239,22 +243,23 @@
                     </span>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section class="fotos" id="fotos">
+        <section class="introgaleria" id="fotos">
             <div class="container">
+                <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <h2>Galeria de fotos do evento</h2>
-                <div class="lista-fotos">
+                <div class="lista-fotos efeitozoom">
                     <ul class="row">
                         <li class="pad-row desk4 note4 tabl6 celh6 celu6">
-                            <div class="box-lista-fotos">
-                                <img src="assets/img/foto01t.jpg" alt="">
-                            </div>
+                            <figure class="box-lista-fotos">
+                                <img src="assets/img/foto1.jpg" alt="">
+                            </figure>
                         </li>
                         <li class="pad-row desk4 note4 tabl6 celh6 celu6">
-                            <div class="box-lista-fotos">
-                                <img src="assets/img/foto02t.jpg" alt="">
-                            </div>
+                            <figure class="box-lista-fotos">
+                                <img src="assets/img/foto2.jpg" alt="">
+                            </figure>
                         </li>
                     </ul>
                 </div>

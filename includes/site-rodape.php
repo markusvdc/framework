@@ -46,12 +46,12 @@
                     <ul class="lista-slider">
                         <li class="item-lista-slider">
                             <div class="imagem-slidermodal">
-                                <img src="assets/img/foto01.jpg" alt="">
+                                <img src="assets/img/foto1.jpg" alt="">
                             </div>
                         </li>
                         <li class="item-lista-slider">
                             <div class="imagem-slidermodal">
-                                <img src="assets/img/foto02.jpg" alt="">
+                                <img src="assets/img/foto2.jpg" alt="">
                             </div>
                             <!-- <div class="legenda-slidermodal">
                                 <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus</p>
@@ -60,9 +60,9 @@
                     </ul>
                 </div>
                 <div class="controlesslider">
-                    <a href="#" class="anterior-controlesslider flex-prev"><img src="assets/img/icones/seta2.svg" alt=""></a>
+                    <a href="#" class="anterior-controlesslider flex-prev"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
                     <div class="paginacao-controlesslider"></div>
-                    <a href="#" class="proximo-controlesslider flex-next"><img src="assets/img/icones/seta2.svg" alt=""></a>
+                    <a href="#" class="proximo-controlesslider flex-next"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
                 </div>
             </div>
         </div>

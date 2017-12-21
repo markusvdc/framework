@@ -30,8 +30,8 @@ if (isChrome){
 *    Altura banner igual tela
 * --------------------------------------------------------------------------------------*/
 function alturaBanner() {
-    $('.banneraltura').height(Math.max($(window).height(), 500));
-    // $('.banneraltura').height(Math.max($(window).height(), 500) - $('.cabecalho').innerHeight());
+    // $('.banneraltura').height(Math.max($(window).height(), 500));
+    $('.banneraltura').height(Math.max($(window).height(), 500) - $('.cabecalho').innerHeight());
 }
 
 
@@ -244,6 +244,11 @@ $(document).ready(function(){
     if ($('.rolagem').length) {
         $(".rolagem").mCustomScrollbar();
     };
+
+    /* ---------------------------------------------------------------------------------------
+    *    Dispara altura banner
+    * --------------------------------------------------------------------------------------*/
+    alturaBanner();
 
 
 

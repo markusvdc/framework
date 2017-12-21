@@ -17,7 +17,7 @@ $(document).ready(function(){
     * ----------------------------------------------------------------------------------------
     */
     criaGaleria = true;
-    $('.fotos .lista-fotos li').on('click', function(){
+    $('.introgaleria .lista-fotos li').on('click', function(){
         $('.wrap-slidermodal').show();
         if (criaGaleria) {
             $('.wrap-slidermodal .slider').flexslider({
@@ -38,7 +38,7 @@ $(document).ready(function(){
             });
             criaGaleria = false;
         }
-        indexGaleria = $('.fotos .lista-fotos li').index(this);
+        indexGaleria = $('.introgaleria .lista-fotos li').index(this);
         setTimeout(function(){
             $('.wrap-slidermodal .slider').flexslider(indexGaleria);
         })
