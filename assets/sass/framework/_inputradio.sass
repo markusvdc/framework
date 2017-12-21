@@ -1,0 +1,62 @@
+// ----------------------------------------------------------------------------------------
+
+//
+//                                  RADIO
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// RADIO: Base
+// ----------------------------------------------------------------------------------------
+.inputradio
+    .item-inputradio
+        label
+            position: relative
+            cursor: pointer
+            display: block
+        b
+            @include prefix(transition, background .2s, webkit ms moz o)
+            position: absolute
+            left: 0
+        span
+            display: block
+        input
+            display: none
+    &.erro
+        .titulo-inputradio
+            color: $corerro
+
+// ----------------------------------------------------------------------------------------
+// RADIO: Exemplo
+// ----------------------------------------------------------------------------------------
+.introformulario
+    .inputradio
+        .item-inputradio
+            @media #{$celular}, #{$celularh}, #{$tablet}
+                padding: 10px 0
+            @media #{$notebook}, #{$desktop}
+                padding: 5px 0
+            label
+                position: relative
+                cursor: pointer
+            b
+                @include prefix(border-radius, 50%, webkit ms moz o)
+                @include prefix(transition, background .2s, webkit ms moz o)
+                border-style: solid
+                border-color: $cor2
+                position: absolute
+                border-width: 2px
+                width: 13px
+                height: 13px
+                left: 0
+                @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
+                    top: 8px
+                @media #{$desktop}
+                    top: 5px
+                &.ativo
+                    background: $cor2
+            span
+                padding-left: 30px
+            input
+                display: none

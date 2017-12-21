@@ -1,0 +1,59 @@
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  SELECT
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// SELECT: Base
+// ----------------------------------------------------------------------------------------
+.select
+    position: relative
+    cursor: pointer
+    select
+        -webkit-appearance: menulist-button
+        @include prefix(opacity, 0, webkit ms moz o)
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        z-index: 2
+    .campo-select
+        display: block
+        position: relative
+        overflow: hidden
+        .seta-campo-select
+            position: absolute
+            svg
+                position: absolute
+    &.inativo
+        @include prefix(opacity, 0.5, webkit ms moz o)
+
+// ----------------------------------------------------------------------------------------
+// SELECT: Exemplo
+// ----------------------------------------------------------------------------------------
+.introformulario
+    .select
+        width: 300px
+        .campo-select
+            .seta-campo-select
+                width: 50px
+                right: 0
+                top: 0
+                bottom: 0
+                background: #FFF
+                svg
+                    width: 15px
+                    height: 9px
+                    top: 20px
+                    right: 17px
+                    path
+                        fill: $cor1
+        &.placeholder
+            .campo-select
+                color: #BBB

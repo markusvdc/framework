@@ -1,0 +1,136 @@
+// ----------------------------------------------------------------------------------------
+// Básico
+// ----------------------------------------------------------------------------------------
+@import 'variaveis'
+@import 'mixins'
+@import 'reset'
+@import 'fonts'
+
+// ----------------------------------------------------------------------------------------
+// Estrutura
+// ----------------------------------------------------------------------------------------
+@import 'framework/wysiwyg'
+@import 'framework/estrutura'
+@import 'framework/keyframes'
+@import 'framework/modal'
+
+// ----------------------------------------------------------------------------------------
+// Formulário
+// ----------------------------------------------------------------------------------------
+@import 'framework/formulario'
+@import 'framework/select'
+@import 'framework/inputcheck'
+@import 'framework/inputradio'
+@import 'framework/inputtext'
+
+// ----------------------------------------------------------------------------------------
+// Click imagem
+// ----------------------------------------------------------------------------------------
+.abreimagem
+    cursor: pointer
+
+// ----------------------------------------------------------------------------------------
+// Abas
+// ----------------------------------------------------------------------------------------
+.abas
+    .conteudo-abas
+        & > li
+            display: none
+
+.clearfix
+    @include clearfix
+
+.table
+    display: table
+    height: 100%
+    width: 100%
+    .cell-table
+        display: table-cell
+        vertical-align: middle
+        height: 100%
+
+
+// ----------------------------------------------------------------------------------------
+// Esconder
+// ----------------------------------------------------------------------------------------
+.esconder
+    display: none !important
+.escondecelular
+    @media #{$celular}
+        display: none !important
+.escondecelularhorizontal
+    @media #{$celularh}
+        display: none !important
+.escondetablet
+    @media #{$tablet}
+        display: none !important
+.escondenotebook
+    @media #{$notebook}
+        display: none !important
+.escondedesktop
+    @media #{$desktop}
+        display: none !important
+.escondemobile
+    @media #{$celular}, #{$celularh}, #{$tablet}
+        display: none !important
+.escondeoutros
+    @media #{$notebook}, #{$desktop}
+        display: none !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------------------
+// Form
+// ----------------------------------------------------------------------------------------
+// .form
+//     @include clearfix
+//     .grupo-form
+//         &:last-child
+//             margin-bottom: 0
+//
+//     .inputtext
+//         width: 100%
+//
+//     .multiplo-form
+//         .info-multiplo-form
+//             display: block
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------------------
+// Iframe youtube
+// ----------------------------------------------------------------------------------------
+.videoclick
+    position: relative
+    iframe
+        vertical-align: middle
+
+.videoresponsivo
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    // padding-top: 25px
+
+    iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    img
+        width: 100%

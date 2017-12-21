@@ -1,0 +1,222 @@
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  MODAL
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// MODAL: Estrutura
+// ----------------------------------------------------------------------------------------
+#modal
+    z-index: 11
+    position: fixed
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    display: none
+    overflow-y: auto
+    overflow-x: hidden
+    .wrap-modal
+        display: none
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Fechar
+    // ----------------------------------------------------------------------------------------
+    .fechar-modal
+        position: absolute
+        cursor: pointer
+        background: transparent
+        z-index: 2
+        text-align: center
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Condição forçar
+    // ----------------------------------------------------------------------------------------
+    &.forcamodal
+        .fechar-modal
+            display: none
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Imagem
+    // ----------------------------------------------------------------------------------------
+    &.imagemmodal
+        text-align: center
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Carregar
+    // ----------------------------------------------------------------------------------------
+    &.carregarmodal
+        .icone-carregarmodal
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 60px
+            height: 60px
+            margin-top: -30px
+            margin-left: -30px
+            border-radius: 50%
+            border-top: 4px solid #FFF
+            border-right: 4px solid transparent
+            animation: girar 1s linear infinite
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Texto padrão
+    // ----------------------------------------------------------------------------------------
+    .texto-modal
+        overflow: hidden
+        text-align: center
+        p
+            vertical-align: middle
+            text-align: left
+            display: inline-block
+            @media #{$celular}
+                text-align: center
+                display: block
+                margin-top: 15px
+            @media #{$celularh}
+                width: 400px
+            @media #{$tablet}
+                max-width: 580px
+            @media #{$notebook}
+                max-width: 880px
+            @media #{$desktop}
+                max-width: 1070px
+        .icone-texto-modal
+            display: inline-block
+            vertical-align: middle
+            text-align: left
+            @media #{$celular}
+                text-align: center
+            @media #{$celularh}, #{$tablet}, #{$notebook}
+                width: 60px
+            @media #{$desktop}
+                width: 70px
+            svg
+                @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
+                    width: 35px
+                    height: 35px
+                @media #{$desktop}
+                    width: 37px
+                    height: 37px
+
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  MODAL
+//
+//
+// ----------------------------------------------------------------------------------------
+
+#modal
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Fechar
+    // ----------------------------------------------------------------------------------------
+    .fechar-modal
+        line-height: 0
+        @media #{$celular}, #{$celularh}
+        @media #{$tablet}, #{$notebook}
+        @media #{$desktop}
+            top: 30px
+            right: 30px
+        svg
+            @media #{$celular}, #{$celularh}
+            @media #{$tablet}, #{$notebook}
+            @media #{$desktop}
+                width: 44px
+                height: 44px
+            path, polygon
+                fill: #FFF
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Fechar
+    // ----------------------------------------------------------------------------------------
+    &.imagemmodal
+        .legenda-imagemmodal
+            p
+                @media #{$celular}, #{$celularh}
+                    padding-top: 10px
+                @media #{$tablet}, #{$notebook}, #{$desktop}
+                    padding-top: 20px
+
+    &.mensagemmodal
+        .botao-mensagemmodal
+            text-align: center
+            @media #{$celular}, #{$celularh}
+                margin-top: 10px
+            @media #{$tablet}, #{$notebook}, #{$desktop}
+                margin-top: 20px
+
+    // ----------------------------------------------------------------------------------------
+    // MODAL: Texto padrão
+    // ----------------------------------------------------------------------------------------
+    .texto-modal
+        p
+            color: #FFF
+            @media #{$celular}, #{$celularh}
+                font-size: 20px
+                line-height: 26px
+            @media #{$tablet}, #{$notebook}
+                font-size: 24px
+                line-height: 32px
+            @media #{$desktop}
+                font-size: 26px
+                line-height: 34px
+        .icone-texto-modal
+            svg
+                path, polygon, rect
+                    fill: #FFF
+
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  MASCARA
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// MASCARA: Base
+// ----------------------------------------------------------------------------------------
+.mascara
+    z-index: 10
+    position: fixed
+    top: 0
+    right: 0
+    bottom: -1px
+    left: 0
+    display: none
+    background: $cor1
+
+// ----------------------------------------------------------------------------------------
+// MASCARA: Condição aberta
+// ----------------------------------------------------------------------------------------
+body
+    &.mascaraaberta
+        overflow: hidden
+        @media #{$notebook}, #{$desktop}
+            padding-right: 15px
+
+.wrap-slidermodal
+    margin-right: auto
+    margin-left: auto
+    @media #{$celular}
+        padding-top: 70px
+        padding-bottom: 70px
+    @media #{$celularh}
+        // width: 300px
+        padding-top: 20px
+        padding-bottom: 20px
+    @media #{$tablet}
+        padding-top: 85px
+        padding-bottom: 85px
+    @media #{$notebook}
+        width: 820px
+        padding-top: 30px
+        padding-bottom: 30px
+    @media #{$desktop}
+        width: 1000px
+        padding-top: 40px
+        padding-bottom: 40px

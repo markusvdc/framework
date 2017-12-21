@@ -1,0 +1,5 @@
+.rolagem
+Chamada global plugin mCustomScrollbar.
+
+.videoclick
+Chamada global modal vídeo

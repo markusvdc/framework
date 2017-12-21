@@ -1,0 +1,38 @@
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  WYSIWYG
+//
+//
+// ----------------------------------------------------------------------------------------
+
+.texto
+    font-family: $fonte1
+    img
+        max-width: 100%
+        display: block
+        height: auto !important
+
+    > *
+        & + *
+            @media #{$celular}, #{$celularh}
+                margin-top: 10px
+            @media #{$tablet}, #{$notebook}, #{$desktop}
+                margin-top: 15px
+
+    p
+        overflow: hidden
+
+    strong
+        font-weight: 500
+
+    ul
+        padding-left: 19px
+        list-style-type: disc
+
+    ol
+        padding-left: 19px
+        list-style-type: decimal
+
+    a
+        text-decoration: underline

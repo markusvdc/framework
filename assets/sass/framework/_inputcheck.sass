@@ -1,0 +1,56 @@
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  CHECK
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// CHECK: Base
+// ----------------------------------------------------------------------------------------
+.inputcheck
+    .item-inputcheck
+        overflow: hidden
+        cursor: pointer
+        position: relative
+        b
+            @include prefix(transition, background .2s, webkit ms moz o)
+            border-style: solid
+            position: absolute
+        span
+            display: block
+        input
+            display: none
+    &.erro
+        .titulo-inputcheck
+            color: $corerro
+
+// ----------------------------------------------------------------------------------------
+// CHECK: Exemplo
+// ----------------------------------------------------------------------------------------
+.introformulario
+    .inputcheck
+        .item-inputcheck
+            @media #{$celular}, #{$celularh}, #{$tablet}
+                padding: 10px 0
+            @media #{$notebook}, #{$desktop}
+                padding: 5px 0
+            b
+                background: transparent
+                border-width: 2px
+                width: 12px
+                height: 12px
+                border-color: $cor1
+                @media #{$celular}, #{$celularh}, #{$tablet}
+                    top: 11px
+                @media #{$notebook}, #{$desktop}
+                    top: 8px
+            span
+                padding-left: 30px
+                font-size: 18px
+                line-height: 22px
+                color: #555
+            &.ativo
+                b
+                    background: $cor1

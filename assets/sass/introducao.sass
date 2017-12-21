@@ -1,0 +1,116 @@
+@import 'geral'
+
+body
+    font-size: 18px
+    line-height: 1.4
+    color: #444
+
+.intropadrao
+    p
+    .botoes-intropadrao
+        margin-top: 20px
+
+.introslider
+    .controlesslider
+        &>a
+            svg
+                height: 20px
+                width: 20px
+
+.introformulario
+    .campos
+        width: 50%
+        textarea
+            height: 100px
+        .inputcheck-campos
+            .titulo-inputcheck-campos
+                margin-bottom: 10px
+        .inputradio-campos
+            .titulo-inputradio-campos
+                margin-bottom: 10px
+
+.botao1
+    border-style: solid
+    font-family: $fonte1
+    padding: 8px 14px
+    font-size: 16px
+    line-height: 18px
+    border-width: 1px
+    border-style: solid
+    color: #333
+    background-color: #f7f7f7
+    border-color: #CCC
+    @include prefix(border-radius, 4px, webkit ms moz o)
+    &:hover
+        background-color: #EEE
+
+.banner
+    // background-image: url(../img/banner.jpg)
+    @include prefix(background-size, cover, webkit ms moz o)
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    height: 400px
+    background: $cor2
+    p
+        text-transform: uppercase
+        text-align: center
+        color: #FFF
+        font-size: 34px
+        font-weight: 500
+
+.cabecalho
+    background: #FFF
+    height: 70px
+    padding-top: 16px
+    border-bottom: 1px solid #EEE
+    .logo-cabecalho
+        line-height: 0
+        float: left
+        svg
+            width: 26px
+            path
+                fill: $cor1
+    .menu-cabecalho
+        float: right
+        margin-left: 20px
+        margin-top: 9px
+        li
+            float: left
+            &+li
+                margin-left: 25px
+            a
+                display: block
+                color: $cor1
+
+main
+    margin-top: 20px
+
+.fotos
+    background: #e1e1e1
+    // display: none
+    h2
+        &::before
+            background: #ffc220
+    .lista-fotos
+        li
+            @media #{$celular}, #{$celularh}
+                margin-bottom: 10px
+            @media #{$tablet}, #{$notebook}
+                margin-bottom: 20px
+            @media #{$desktop}
+                margin-bottom: 20px
+            .box-lista-fotos
+                overflow: hidden
+            img
+                cursor: pointer
+                height: auto
+        .naoIE &
+            li
+                img
+                    @media #{$notebook}, #{$desktop}
+                        @include prefix(transition, transform 0.5s, webkit ms moz o)
+                &:hover
+                    img
+                        @media #{$notebook}, #{$desktop}
+                            @include prefix(transform, scale(1.05), webkit ms moz o)

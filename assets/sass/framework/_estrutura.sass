@@ -1,0 +1,209 @@
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  ESTRUTURA
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// ESTRUTURA: Base
+// ----------------------------------------------------------------------------------------
+.container
+    margin: 0 auto
+    @include clearfix
+    @media #{$celular}
+        padding-right: 20px
+        padding-left: 20px
+    @media #{$celularh}
+        padding-right: 10px
+        padding-left: 10px
+        width: 480px
+    @media #{$tablet}
+        padding-right: 10px
+        padding-left: 10px
+        width: 660px
+    @media #{$notebook}
+        padding-right: 10px
+        padding-left: 10px
+        width: 960px
+    @media #{$desktop}
+        padding-right: 15px
+        padding-left: 15px
+        width: 1170px
+    .row
+        @include clearfix
+        @media #{$celular}
+            margin-right: -5px
+            margin-left: -5px
+        @media #{$celularh}
+            margin-right: -5px
+            margin-left: -5px
+        @media #{$tablet}
+            margin-right: -10px
+            margin-left: -10px
+        @media #{$notebook}
+            margin-right: -10px
+            margin-left: -10px
+        @media #{$desktop}
+            margin-right: -15px
+            margin-left: -15px
+
+        // ----------------------------------------------------------------------------------------
+        // ESTRUTURA: Espaçamento
+        // ----------------------------------------------------------------------------------------
+        .pad-row
+            @media #{$celular}
+                padding-right: 5px
+                padding-left: 5px
+            @media #{$celularh}
+                padding-right: 5px
+                padding-left: 5px
+            @media #{$tablet}
+                padding-right: 10px
+                padding-left: 10px
+            @media #{$notebook}
+                padding-right: 10px
+                padding-left: 10px
+            @media #{$desktop}
+                padding-right: 15px
+                padding-left: 15px
+
+// ----------------------------------------------------------------------------------------
+// ESTRUTURA: Grid
+// ----------------------------------------------------------------------------------------
+@media #{$celular}
+    .celu1, .celu2, .celu3, .celu4, .celu5, .celu6, .celu7, .celu8, .celu9, .celu10, .celu11, .celu12
+        float: left
+    .celu1
+        width: 8.33333%
+    .celu2
+        width: 16.6666%
+    .celu3
+        width: 25%
+    .celu4
+        width: 33.3333%
+    .celu5
+        width: 41.66667%
+    .celu6
+        width: 50%
+    .celu7
+        width: 58.33333%
+    .celu8
+        width: 66.66667%
+    .celu9
+        width: 75%
+    .celu10
+        width: 83.33333%
+    .celu11
+        width: 91.66667%
+    .celu12
+        width: 100%
+@media #{$celularh}
+    .celh1, .celh2, .celh3, .celh4, .celh5, .celh6, .celh7, .celh8, .celh9, .celh10, .celh11, .celh12
+        float: left
+    .celh1
+        width: 8.33333%
+    .celh2
+        width: 16.6666%
+    .celh3
+        width: 25%
+    .celh4
+        width: 33.3333%
+    .celh5
+        width: 41.66667%
+    .celh6
+        width: 50%
+    .celh7
+        width: 58.33333%
+    .celh8
+        width: 66.66667%
+    .celh9
+        width: 75%
+    .celh10
+        width: 83.33333%
+    .celh11
+        width: 91.66667%
+    .celh12
+        width: 100%
+@media #{$tablet}
+    .tabl1, .tabl2, .tabl3, .tabl4, .tabl5, .tabl6, .tabl7, .tabl8, .tabl9, .tabl10, .tabl11, .tabl12
+        float: left
+    .tabl1
+        width: 8.33333%
+    .tabl2
+        width: 16.6666%
+    .tabl3
+        width: 25%
+    .tabl4
+        width: 33.3333%
+    .tabl5
+        width: 41.66667%
+    .tabl6
+        width: 50%
+    .tabl7
+        width: 58.33333%
+    .tabl8
+        width: 66.66667%
+    .tabl9
+        width: 75%
+    .tabl10
+        width: 83.33333%
+    .tabl11
+        width: 91.66667%
+    .tabl12
+        width: 100%
+@media #{$notebook}
+    .note1, .note2, .note3, .note4, .note5, .note6, .note7, .note8, .note9, .note10, .note11, .note12
+        float: left
+    .note1
+        width: 8.33333%
+    .note2
+        width: 16.6666%
+    .note3
+        width: 25%
+    .note4
+        width: 33.3333%
+    .note5
+        width: 41.66667%
+    .note6
+        width: 50%
+    .note7
+        width: 58.33333%
+    .note8
+        width: 66.66667%
+    .note9
+        width: 75%
+    .note10
+        width: 83.33333%
+    .note11
+        width: 91.66667%
+    .note12
+        width: 100%
+@media #{$desktop}
+    .desk1, .desk2, .desk3, .desk4, .desk5, .desk6, .desk7, .desk8, .desk9, .desk10, .desk11, .desk12
+        float: left
+    .desk1
+        width: 8.33333%
+    .desk2
+        width: 16.6666%
+    .desk3
+        width: 25%
+    .desk4
+        width: 33.3333%
+    .desk5
+        width: 41.66667%
+    .desk6
+        width: 50%
+    .desk7
+        width: 58.33333%
+    .desk8
+        width: 66.66667%
+    .desk9
+        width: 75%
+    .desk10
+        width: 83.33333%
+    .desk11
+        width: 91.66667%
+    .desk12
+        width: 100%

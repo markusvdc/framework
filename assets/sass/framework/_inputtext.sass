@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------------------
+//
+//
+//                                  TEXT
+//
+//
+// ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------
+// TEXT: Base
+// ----------------------------------------------------------------------------------------
+.inputtext
+    width: 100%
+    &:disabled,
+    &.inativo
+        @include prefix(opacity, 0.5, webkit ms moz o)
+
+// ----------------------------------------------------------------------------------------
+// TEXT: Exemplo
+// ----------------------------------------------------------------------------------------
+.introformulario
+    .inputtext
+        @include prefix(border-radius, 15px, webkit ms moz o)
+        border-style: solid
+        background: transparent
+        font-family: $fonte1
+        border-color: #DDD
+        color: #333
+        line-height: 1.4
+        @media #{$celular}, #{$celularh}
+            border-width: 2px
+            font-size: 14px
+            padding: 11px 18px
+        @media #{$tablet}, #{$notebook}
+            border-width: 2px
+            font-size: 14px
+            padding: 11px 18px
+        @media #{$desktop}
+            border-width: 2px
+            font-size: 16px
+            padding: 13px 20px
+
+// ----------------------------------------------------------------------------------------
+// TEXT: Placeholder exemplo
+// ----------------------------------------------------------------------------------------
+.introformulario
+    @include placeholder
+        color: #BBB
+        font-family: $fonte1

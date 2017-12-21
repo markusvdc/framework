@@ -1,0 +1,30 @@
+// ----------------------------------------------------------------------------------------
+// gerador das propriedades de navegador
+// ----------------------------------------------------------------------------------------
+@mixin prefix($property, $value, $prefixes: ())
+    @each $prefix in $prefixes
+        #{'-' + $prefix + '-' + $property}: $value
+    #{$property}: $value
+
+// ----------------------------------------------------------------------------------------
+// gerador das propriedades de navegador
+// ex: @include prefix(transition, all .2s, webkit ms moz o)
+// ----------------------------------------------------------------------------------------
+@mixin placeholder
+    ::-webkit-input-placeholder
+        @content
+    ::-moz-input-placeholder
+        @content
+    ::-ms-input-placeholder
+        @content
+    ::-o-input-placeholder
+        @content
+
+// ----------------------------------------------------------------------------------------
+// clearfix
+// ----------------------------------------------------------------------------------------
+@mixin clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
