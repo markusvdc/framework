@@ -1,7 +1,23 @@
 <footer class="rodape">
     <div class="container">
+        <div class="social-rodape">
+            <?php include 'site-social.php';?>
+        </div>
     </div>
 </footer>
+
+<div id="mmodal" class="ativo">
+    <nav class="menu-mmodal">
+        <?php
+            include 'site-menu.php';
+        ?>
+    </nav>
+    <div class="social-mmodal">
+        <?php
+            include 'site-social.php';
+        ?>
+    </div>
+</div>
 
 <div id="modal">
     <span class="fechar-modal"><?= file_get_contents('assets/img/icones/fechar-circulo.svg') ?></span>

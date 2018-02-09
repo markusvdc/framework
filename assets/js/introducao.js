@@ -47,4 +47,10 @@ $(document).ready(function(){
         $('.wrap-slidermodal').fadeIn();
         abreMascara();
     });
+
+	$('#mmenu').click(function(){
+		$(this).toggleClass('ativo');
+        $('#mmodal').toggleClass('ativo');
+	});
+
 });
