@@ -6,7 +6,7 @@
     <?= file_get_contents('assets/img/logo.svg') ?>
 </div>
 <span class="icone-inicio"></span>
-<button id="mmenu" class="ativo">
+<button id="mmenu">
     <span></span><span></span><span></span><span></span>
 </button>
 <header class="cabecalho">

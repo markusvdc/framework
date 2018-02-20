@@ -6,7 +6,7 @@
     </div>
 </footer>
 
-<div id="mmodal" class="ativo">
+<div id="mmodal">
     <nav class="menu-mmodal">
         <?php
             include 'site-menu.php';
@@ -91,6 +91,8 @@
 <script src="assets/js/libs/jquery.js"></script>
 <script src="assets/js/libs/mask.js"></script>
 <script src="assets/js/libs/SmoothScroll.js"></script>
+<script src="assets/js/libs/flickity.pkgd.min.js"></script>
+<script src="assets/js/libs/mCustomScrollbar.js"></script>
 <script src="assets/js/libs/flexslider.js"></script>
 <script src="assets/js/framework.js"></script>
 <script src="assets/js/geral.js"></script>

@@ -73,7 +73,17 @@ function centralizar(){
     // console.log(tamanhoModal);
 }
 
+function fechaMmodal() {
+    $('#mmenu, #mmodal').toggleClass('ativo');
+}
 
+$('#mmodal .ancora a').on('click', function(){
+    fechaMmodal();
+});
+
+$('#mmenu').on('click', function(){
+    fechaMmodal();
+});
 
 /* ---------------------------------------------------------------------------------------
 *    Modal: Recursos comuns
@@ -162,14 +172,11 @@ function carregar(){
 }
 
 
-
 /* ---------------------------------------------------------------------------------------
 *    Ancora
 * --------------------------------------------------------------------------------------*/
-$('.ancora a').click(function(){
+$('.ancora a').on('click', function(){
     var href = $.attr(this, 'href');
-    fechaModal();
-    $('#hamburguer > div').toggleClass('open');
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 500, function () {

@@ -1,4 +1,6 @@
 @import 'geral'
+@import 'libs/mCustomScrollbar'
+@import 'libs/flickity'
 
 body
     font-size: 18px
@@ -28,6 +30,19 @@ body
                 a
                     &.flex-active
                         color: $cor1
+
+.rolagem
+    height: 200px
+.mCSB_scrollTools
+    // fundo
+    .mCSB_draggerRail
+        width: 4px
+        background: #EEE
+.mCSB_dragger
+    // barra
+    .mCSB_dragger_bar
+        width: 4px
+        background: $cor1
 
 .introformulario
     .campos
@@ -348,3 +363,22 @@ body
                 top: 15px
             @media #{$notebook}, #{$desktop}
                 top: 18px
+
+.carousel-cell
+    width: 28%
+    height: 200px
+    margin-right: 10px
+    background: #8C8
+    border-radius: 5px
+    counter-increment: carousel-cell
+
+.carousel-cell.is-selected
+    background: #ED2
+
+.carousel-cell:before
+    display: block
+    text-align: center
+    content: counter(carousel-cell)
+    line-height: 200px
+    font-size: 80px
+    color: white
