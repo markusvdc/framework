@@ -167,7 +167,7 @@ input::placeholder, textarea::placeholder {
     .container {
       padding-right: 15px;
       padding-left: 15px;
-      width: 1170px; } }
+      width: 1200px; } }
   .container .row:after {
     content: "";
     display: table;
@@ -1244,7 +1244,8 @@ strong {
 body {
   font-size: 18px;
   line-height: 1.4;
-  color: #444; }
+  color: #444;
+  background: #f7f7f7; }
 
 .intropadrao .botoes-intropadrao {
   margin-top: 20px; }
@@ -1256,18 +1257,28 @@ body {
     .introslider .controlesslider > a svg {
       height: 20px;
       width: 20px; }
+      .introslider .controlesslider > a svg path {
+        fill: #0d4b8a; }
     .introslider .controlesslider > a.anterior-controlesslider svg {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       -o-transform: rotate(180deg);
       transform: rotate(180deg); }
+    .introslider .controlesslider > a.flex-disabled svg {
+      -webkit-opacity: 0.3;
+      -ms-opacity: 0.3;
+      -moz-opacity: 0.3;
+      -o-opacity: 0.3;
+      opacity: 0.3; }
   .introslider .controlesslider .paginacao-controlesslider {
     float: left; }
     .introslider .controlesslider .paginacao-controlesslider li {
       float: left; }
-      .introslider .controlesslider .paginacao-controlesslider li a.flex-active {
-        color: #fd4577; }
+      .introslider .controlesslider .paginacao-controlesslider li a {
+        color: #0d4b8a; }
+        .introslider .controlesslider .paginacao-controlesslider li a.flex-active {
+          color: #fd4577; }
 
 .rolagem {
   height: 200px; }
@@ -1389,6 +1400,19 @@ body {
 .introabas .menu-abas li {
   display: inline-block; }
 
+.rodape {
+  padding-bottom: 100px; }
+  @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
+    .rodape .labcom-rodape svg {
+      width: 75px;
+      height: 33px; } }
+  @media (min-width: 1400px) {
+    .rodape .labcom-rodape svg {
+      width: 93px;
+      height: 38px; } }
+  .rodape .labcom-rodape svg path {
+    fill: #000; }
+
 .social-cabecalho,
 .social-rodape {
   float: right;
@@ -1403,8 +1427,8 @@ body {
       margin-left: 10px; }
     .social-cabecalho .socialpadrao li svg,
     .social-rodape .socialpadrao li svg {
-      width: 20px;
-      height: 20px; }
+      width: 19px;
+      height: 19px; }
       .social-cabecalho .socialpadrao li svg path,
       .social-cabecalho .socialpadrao li svg polygon,
       .social-rodape .socialpadrao li svg path,
@@ -1671,12 +1695,12 @@ body {
   width: 28%;
   height: 200px;
   margin-right: 10px;
-  background: #8C8;
+  background: #0d4b8a;
   border-radius: 5px;
   counter-increment: carousel-cell; }
 
 .carousel-cell.is-selected {
-  background: #ED2; }
+  background: #fd4577; }
 
 .carousel-cell:before {
   display: block;
@@ -1685,5 +1709,44 @@ body {
   line-height: 200px;
   font-size: 80px;
   color: white; }
+
+.feed .box-feed {
+  border-radius: 20px;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden; }
+  .feed .box-feed .item-feed {
+    height: 390px;
+    background: #FFF; }
+    .feed .box-feed .item-feed:nth-child(2), .feed .box-feed .item-feed:nth-child(3), .feed .box-feed .item-feed:nth-child(5), .feed .box-feed .item-feed:nth-child(6), .feed .box-feed .item-feed:nth-child(8), .feed .box-feed .item-feed:nth-child(9) {
+      border-left: 2px solid #f7f7f7; }
+    .feed .box-feed .item-feed + .item-feed + .item-feed + .item-feed {
+      border-top: 2px solid #f7f7f7; }
+
+.introicones2 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px; }
+  .introicones2 li {
+    transition: color ease 0.2s; }
+    .introicones2 li:hover {
+      color: #fd4577; }
+
+.introicones {
+  margin-top: 100px; }
+  .introicones li {
+    font-size: 0;
+    text-align: center;
+    height: 55px; }
+    .introicones li.tam2 svg {
+      width: 25px;
+      height: 25px; }
+  .introicones svg {
+    width: 20px;
+    height: 20px; }
+    .introicones svg path, .introicones svg polygon {
+      fill: #0d4b8a;
+      transition: fill 0.2s ease; }
+    .introicones svg:hover path, .introicones svg:hover polygon {
+      fill: #fd4577; }
 
 /*# sourceMappingURL=introducao.css.map */

@@ -1,12 +1,8 @@
-<?php
-    include 'includes/site-metas.php';
-?>
+<?php include 'includes/site-metas.php';?>
     <title>Framework</title>
 </head>
 <body class="inicioaberto">
-    <?php
-        include 'includes/site-cabecalho.php';
-    ?>
+    <?php include 'includes/site-cabecalho.php';?>
 
     <main>
         <div class="container">
@@ -14,11 +10,9 @@
         </div>
     </main>
 
-    <?php
-        include 'includes/site-rodape.php';
-    ?>
+    <?php include 'includes/site-rodape.php';?>
 
     <link rel="stylesheet" href="assets/css/home.css">
-    <script src="assets/js/home.js"></script>
+    <script defer src="assets/js/home.js"></script>
 </body>
 </html>

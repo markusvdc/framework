@@ -14,6 +14,56 @@
             </div>
         </div> -->
 
+        <div class="introicones">
+            <div class="container">
+                <ul class="row">
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/instagram.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/facebook.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/twitter.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/tableless.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/linkedin.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/github.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/medium.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo2.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo3.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo4.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/infinito.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/monitor.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/artigos.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/celular.svg') ?></li>
+                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/email.svg') ?></li>
+                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/lupa.svg') ?></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="container">
+                <div class="box-feed">
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                    <div class="desk4 item-feed">a</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="introicones2">
+            <div class="container">
+                <ul class="row">
+                    <li class="pad-row desk1"><i class="fab fa-fw fa-github-alt"></i></li>
+                    <li class="pad-row desk1"><i class="fab fa-fw fa-medium-m"></i></li>
+                    <li class="pad-row desk1"><i class="fab fa-fw fa-linkedin-in"></i></li>
+                    <li class="pad-row desk1"><i class="fas fa-fw fa-asterisk"></i></li>
+            </div>
+        </div>
+
         <div class="introslider intropadrao">
             <div class="container">
                 <div class="slider-lista-reservas">
@@ -76,11 +126,51 @@
                 <button id="testeMensagem" class="botao1" type="button" name="button">Mensagem</button>
                 <button class="botao1 abreVideo" type="button" name="button" data-video="VOa4XcXN0r0">Vídeo</button>
                 <button id="testeCarregar" class="botao1" type="button" name="button">Carregar</button>
+                <button id="testepop" class="botao1" type="button" name="button"
+                    data-imagem="http://192.168.0.230/framework/assets/img/foto1.jpg"
+                    data-nome="Nome produto"
+                    data-texto="Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada curabitur arcu erat."
+                >pop</button>
             </div>
         </section>
 
         <section>
             <div class="container">
+
+                <!-- <img width="200" src="assets/img/foto1.jpg" data-enllax-ratio=".5" data-enllax-type="foreground" /> -->
+
+
+                <!-- <div id="pin2" class="box2 blue">
+                    <p>Take me with you!</p>
+                    <a href="#" class="viewsource">view source</a>
+                </div>
+ -->
+
+
+ <script>
+ 	// init controller
+ 	// var controller = new ScrollMagic.Controller();
+ </script>
+
+<style>
+#pin1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+<div style="position: relative;">
+    <div class="spacer s2"></div>
+    <div id="trigger1" class="spacer s0"></div>
+    <div id="pin1" class="box2 blue">
+        <!-- <p>Stay where you are (at least for a while).</p>
+        <a href="#" class="viewsource">view source</a> -->
+        <img width="200" src="assets/img/foto1.jpg"/>
+    </div>
+    <div class="spacer s2"></div>
+</div>
+
+
                 <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <div class="rolagem">
                     <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
@@ -297,6 +387,6 @@
     <?php include 'includes/site-rodape.php';?>
 
     <link rel="stylesheet" href="assets/css/introducao.css">
-    <script src="assets/js/introducao.js"></script>
+    <script defer src="assets/js/introducao.js"></script>
 </body>
 </html>

@@ -1,12 +1,42 @@
+function portfolio(imagem, nome, texto) {
+    $('#modal').attr('class','portfoliomodal');
+
+    $('.wrap-portfoliomodal .imagem-portfoliomodal img').attr('src', imagem);
+    $('.wrap-portfoliomodal .nome-portfoliomodal').html(nome);
+    $('.wrap-portfoliomodal .texto-portfoliomodal p').html(texto);
+
+    $('.wrap-portfoliomodal').fadeIn();
+    abreMascara();
+}
+
 $(document).ready(function(){
+    /* ---------------------------------------------------------------------------------------
+   *    Click modal portfolio
+   * --------------------------------------------------------------------------------------*/
+   $('#testepop').on('click', function(){
+       portfolio($(this).attr('data-imagem'), $(this).attr('data-nome'), $(this).attr('data-texto'));
+   });
+
+   // $('main').enllax();
+
+   var controller = new ScrollMagic.Controller();
+   var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 800})
+                   .setPin("#pin1")
+                   // .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+                   .addTo(controller);
+
+
+});
+
+$(window).on('load', function(){
     $('.introslider .slider').flexslider({
         selector: ".lista-slider > .item-lista-slider",
         animation: "slide",
-        slideshow: false,
-        animationLoop: false,
-        move: 1,
+        // slideshow: false,
+        // move: 1,
         // directionNav: false,
         // controlNav: false,
+        animationLoop: false,
         customDirectionNav: $(".introslider .controlesslider > a"),
         controlsContainer: $(".introslider .paginacao-controlesslider")
     });
@@ -60,5 +90,4 @@ $(document).ready(function(){
             x3: 20
         }
     });
-
 });

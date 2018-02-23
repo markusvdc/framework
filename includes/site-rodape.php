@@ -1,5 +1,6 @@
 <footer class="rodape">
     <div class="container">
+        <a href="#" class="labcom-rodape"><?= file_get_contents('assets/img/labcom.svg') ?></a>
         <div class="social-rodape">
             <?php include 'site-social.php';?>
         </div>
@@ -8,14 +9,10 @@
 
 <div id="mmodal">
     <nav class="menu-mmodal">
-        <?php
-            include 'site-menu.php';
-        ?>
+        <?php include 'site-menu.php';?>
     </nav>
     <div class="social-mmodal">
-        <?php
-            include 'site-social.php';
-        ?>
+        <?php include 'site-social.php';?>
     </div>
 </div>
 
@@ -23,6 +20,16 @@
     <span class="fechar-modal"><?= file_get_contents('assets/img/icones/fechar-circulo.svg') ?></span>
 
     <div class="container">
+        <div class="wrap-portfoliomodal wrap-modal">
+            <div class="imagem-portfoliomodal">
+                <img src="" alt="">
+            </div>
+            <h2 class="nome-portfoliomodal"></h2>
+            <div class="texto-portfoliomodal">
+                <p></p>
+            </div>
+        </div>
+
         <div class="wrap-mensagemmodal wrap-modal">
             <div class="texto-modal">
                 <div class="icone-texto-modal"></div><p></p>
@@ -50,9 +57,7 @@
 
         <div class="wrap-menumodal wrap-modal">
             <nav class="menu-menumodal">
-                <?php
-                    include 'site-menu.php';
-                ?>
+                <?php include 'site-menu.php';?>
             </nav>
         </div>
 
@@ -89,10 +94,12 @@
 <div class="mascara"></div>
 
 <script src="assets/js/libs/jquery.js"></script>
-<script src="assets/js/libs/mask.js"></script>
-<script src="assets/js/libs/SmoothScroll.js"></script>
-<script src="assets/js/libs/flickity.pkgd.min.js"></script>
-<script src="assets/js/libs/mCustomScrollbar.js"></script>
-<script src="assets/js/libs/flexslider.js"></script>
-<script src="assets/js/framework.js"></script>
-<script src="assets/js/geral.js"></script>
+<script async src="assets/js/libs/mask.js"></script>
+<!-- <script async src="assets/js/libs/SmoothScroll.js"></script> -->
+<script async src="assets/js/libs/flickity.pkgd.min.js"></script>
+<script async src="assets/js/libs/mCustomScrollbar.js"></script>
+<!-- <script async src="assets/js/libs/jquery.enllax.min.js"></script> -->
+<script async src="assets/js/libs/ScrollMagic.min.js"></script>
+<script async src="assets/js/libs/flexslider.js"></script>
+<script refer src="assets/js/framework.js"></script>
+<script refer src="assets/js/geral.js"></script>

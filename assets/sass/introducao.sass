@@ -6,6 +6,7 @@ body
     font-size: 18px
     line-height: 1.4
     color: #444
+    background: #f7f7f7
 
 .intropadrao
     p
@@ -20,16 +21,23 @@ body
             svg
                 height: 20px
                 width: 20px
+                path
+                    fill: $cor2
             &.anterior-controlesslider
                 svg
                     @include prefix(transform, rotate(180deg), webkit ms moz o)
+            &.flex-disabled
+                svg
+                    @include prefix(opacity, 0.3, webkit ms moz o)
         .paginacao-controlesslider
             float: left
             li
                 float: left
                 a
+                    color: $cor2
                     &.flex-active
                         color: $cor1
+
 
 .rolagem
     height: 200px
@@ -145,6 +153,18 @@ body
         li
             display: inline-block
 
+.rodape
+    padding-bottom: 100px
+    .labcom-rodape
+        svg
+            @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
+                width: 75px
+                height: 33px
+            @media #{$desktop}
+                width: 93px
+                height: 38px
+            path
+                fill: #000
 .social-cabecalho,
 .social-rodape
     float: right
@@ -157,8 +177,8 @@ body
             &+li
                 margin-left: 10px
             svg
-                width: 20px
-                height: 20px
+                width: 19px
+                height: 19px
                 path,
                 polygon
                     fill: $cor2
@@ -368,12 +388,12 @@ body
     width: 28%
     height: 200px
     margin-right: 10px
-    background: #8C8
+    background: $cor2
     border-radius: 5px
     counter-increment: carousel-cell
 
 .carousel-cell.is-selected
-    background: #ED2
+    background: $cor1
 
 .carousel-cell:before
     display: block
@@ -382,3 +402,56 @@ body
     line-height: 200px
     font-size: 80px
     color: white
+
+
+
+.feed
+    .box-feed
+        border-radius: 20px
+        box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15)
+        overflow: hidden
+        .item-feed
+            // border: 1px solid #eee
+            height: 390px
+            background: #FFF
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(8),
+            &:nth-child(9)
+                border-left: 2px solid #f7f7f7
+            &+.item-feed+.item-feed+.item-feed
+                border-top: 2px solid #f7f7f7
+.introicones2
+    margin-top: 100px
+    text-align: center
+    font-size: 20px
+    li
+        transition: color ease .2s
+        &:hover
+            color: $cor1
+
+
+.introicones
+    margin-top: 100px
+    li
+        font-size: 0
+        text-align: center
+        height: 55px
+        // padding-top: 15px
+        // padding-bottom: 15px
+        // border:
+        &.tam2
+            svg
+                width: 25px
+                height: 25px
+    svg
+        width: 20px
+        height: 20px
+        path, polygon
+            fill: $cor2
+            transition: fill 0.2s ease
+        &:hover
+            path, polygon
+                fill: $cor1
