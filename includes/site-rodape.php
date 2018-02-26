@@ -95,10 +95,10 @@
 
 <script src="assets/js/libs/jquery.js"></script>
 <script async src="assets/js/libs/mask.js"></script>
-<!-- <script async src="assets/js/libs/SmoothScroll.js"></script> -->
+<script async src="assets/js/libs/SmoothScroll.js"></script>
 <script async src="assets/js/libs/flickity.pkgd.min.js"></script>
 <script async src="assets/js/libs/mCustomScrollbar.js"></script>
-<!-- <script async src="assets/js/libs/jquery.enllax.min.js"></script> -->
+<script async src="assets/js/libs/jquery.enllax.custom.js"></script>
 <script async src="assets/js/libs/ScrollMagic.min.js"></script>
 <script async src="assets/js/libs/flexslider.js"></script>
 <script refer src="assets/js/framework.js"></script>

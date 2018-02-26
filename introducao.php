@@ -95,30 +95,20 @@
             <div class="container">
                 <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <div class="carousel">
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-        <!-- <div class="container">
-            <div id="verificaBrowser">
-
-            </div>
-        </div> -->
 
         <section class="">
             <div class="container">
@@ -135,41 +125,8 @@
         </section>
 
         <section>
+
             <div class="container">
-
-                <!-- <img width="200" src="assets/img/foto1.jpg" data-enllax-ratio=".5" data-enllax-type="foreground" /> -->
-
-
-                <!-- <div id="pin2" class="box2 blue">
-                    <p>Take me with you!</p>
-                    <a href="#" class="viewsource">view source</a>
-                </div>
- -->
-
-
- <script>
- 	// init controller
- 	// var controller = new ScrollMagic.Controller();
- </script>
-
-<style>
-#pin1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-</style>
-<div style="position: relative;">
-    <div class="spacer s2"></div>
-    <div id="trigger1" class="spacer s0"></div>
-    <div id="pin1" class="box2 blue">
-        <!-- <p>Stay where you are (at least for a while).</p>
-        <a href="#" class="viewsource">view source</a> -->
-        <img width="200" src="assets/img/foto1.jpg"/>
-    </div>
-    <div class="spacer s2"></div>
-</div>
-
 
                 <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <div class="rolagem">
@@ -361,6 +318,7 @@
                 </div>
             </div>
         </section> -->
+
 
         <section class="introgaleria" id="fotos">
             <div class="container">

@@ -10,6 +10,7 @@ function portfolio(imagem, nome, texto) {
 }
 
 $(document).ready(function(){
+
     /* ---------------------------------------------------------------------------------------
    *    Click modal portfolio
    * --------------------------------------------------------------------------------------*/
@@ -17,18 +18,13 @@ $(document).ready(function(){
        portfolio($(this).attr('data-imagem'), $(this).attr('data-nome'), $(this).attr('data-texto'));
    });
 
-   // $('main').enllax();
-
-   var controller = new ScrollMagic.Controller();
-   var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 800})
-                   .setPin("#pin1")
-                   // .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                   .addTo(controller);
-
-
+   $('.introslider2 .carousel-cell button').on('click', function(){
+       console.log('teste');
+   });
 });
 
 $(window).on('load', function(){
+
     $('.introslider .slider').flexslider({
         selector: ".lista-slider > .item-lista-slider",
         animation: "slide",
@@ -83,6 +79,7 @@ $(window).on('load', function(){
         cellAlign: 'left',
         contain: true,
         groupCells: true,
+        draggable: false,
         arrowShape: {
             x0: 10,
             x1: 60, y1: 50,
