@@ -1,0 +1,5 @@
+@media #{$celular}
+@media #{$celularh}
+@media #{$tablet}
+@media #{$notebook}
+@media #{$desktop}

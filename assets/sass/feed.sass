@@ -1,0 +1,68 @@
+@import 'geral'
+@import 'libs/mCustomScrollbar'
+@import 'libs/flickity'
+
+.cabecalho,
+.rodape,
+#mmodal,
+#mmenu,
+.mcabecalho
+    display: none
+
+main
+    padding: 100px 0
+    background-color: #f7f7f7
+
+.feed
+    .box-feed
+        box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15)
+        background-color: #FFF
+        @media #{$celular}
+        @media #{$celularh}
+            border-radius: 15px
+        @media #{$tablet}
+            border-radius: 15px
+        @media #{$notebook}
+            border-radius: 15px
+        @media #{$desktop}
+            border-radius: 20px
+        overflow: hidden
+        .item-feed
+            // border: 1px solid #eee
+            background: #FFF
+            @media #{$celular}
+                height: 230px
+            @media #{$celularh}
+                height: 230px
+            @media #{$tablet}
+                height: 320px
+            @media #{$notebook}
+                height: 314px
+            @media #{$desktop}
+                height: 390px
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(8),
+            &:nth-child(9)
+                @media #{$notebook}, #{$desktop}
+                    border-left: 2px solid #f7f7f7
+            &+.item-feed+.item-feed+.item-feed
+                @media #{$notebook}, #{$desktop}
+                    border-top: 2px solid #f7f7f7
+            &:nth-child(2),
+            &:nth-child(4),
+            &:nth-child(6),
+            &:nth-child(8)
+                @media #{$celularh}, #{$tablet}
+                    border-left: 2px solid #f7f7f7
+            &+.item-feed+.item-feed
+                @media #{$celularh}, #{$tablet}
+                    border-top: 2px solid #f7f7f7
+            &+.item-feed
+                @media #{$celular}
+                    border-top: 2px solid #f7f7f7
+            &:last-child
+                @media #{$celularh}, #{$tablet}
+                    display: none

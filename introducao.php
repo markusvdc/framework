@@ -38,22 +38,6 @@
             </div>
         </div>
 
-        <div class="feed">
-            <div class="container">
-                <div class="box-feed">
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                    <div class="desk4 item-feed">a</div>
-                </div>
-            </div>
-        </div>
-
         <div class="introicones2">
             <div class="container">
                 <ul class="row">
