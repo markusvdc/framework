@@ -14,6 +14,14 @@
                 </div>
             </div>
         </div>
+
+        <div class="pesquisar">
+            <div class="container">
+                <form class="" action="index.html" method="post">
+                    <input type="text" name="" value=""><button type="button" name="button">Pesquisar</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <?php include 'includes/site-rodape.php';?>

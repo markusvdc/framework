@@ -1252,56 +1252,164 @@ main {
   padding: 100px 0;
   background-color: #f7f7f7; }
 
-.feed .box-feed {
-  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
-  background-color: #FFF;
-  overflow: hidden; }
-  @media (min-width: 500px) and (max-width: 749px) {
-    .feed .box-feed {
-      border-radius: 15px; } }
-  @media (min-width: 750px) and (max-width: 989px) {
-    .feed .box-feed {
-      border-radius: 15px; } }
-  @media (min-width: 990px) and (max-width: 1399px) {
-    .feed .box-feed {
-      border-radius: 15px; } }
-  @media (min-width: 1400px) {
-    .feed .box-feed {
-      border-radius: 20px; } }
-  .feed .box-feed .item-feed {
-    background: #FFF; }
+.feed {
+  display: none; }
+  .feed .box-feed {
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+    background-color: #FFF;
+    overflow: hidden; }
     @media (max-width: 499px) {
-      .feed .box-feed .item-feed {
-        height: 230px; } }
+      .feed .box-feed {
+        border-radius: 15px; } }
     @media (min-width: 500px) and (max-width: 749px) {
-      .feed .box-feed .item-feed {
-        height: 230px; } }
+      .feed .box-feed {
+        border-radius: 15px; } }
     @media (min-width: 750px) and (max-width: 989px) {
-      .feed .box-feed .item-feed {
-        height: 320px; } }
+      .feed .box-feed {
+        border-radius: 15px; } }
     @media (min-width: 990px) and (max-width: 1399px) {
-      .feed .box-feed .item-feed {
-        height: 314px; } }
+      .feed .box-feed {
+        border-radius: 15px; } }
     @media (min-width: 1400px) {
-      .feed .box-feed .item-feed {
-        height: 390px; } }
-    @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-      .feed .box-feed .item-feed:nth-child(2), .feed .box-feed .item-feed:nth-child(3), .feed .box-feed .item-feed:nth-child(5), .feed .box-feed .item-feed:nth-child(6), .feed .box-feed .item-feed:nth-child(8), .feed .box-feed .item-feed:nth-child(9) {
-        border-left: 2px solid #f7f7f7; } }
-    @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-      .feed .box-feed .item-feed + .item-feed + .item-feed + .item-feed {
-        border-top: 2px solid #f7f7f7; } }
-    @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-      .feed .box-feed .item-feed:nth-child(2), .feed .box-feed .item-feed:nth-child(4), .feed .box-feed .item-feed:nth-child(6), .feed .box-feed .item-feed:nth-child(8) {
-        border-left: 2px solid #f7f7f7; } }
-    @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-      .feed .box-feed .item-feed + .item-feed + .item-feed {
-        border-top: 2px solid #f7f7f7; } }
+      .feed .box-feed {
+        border-radius: 20px; } }
+    .feed .box-feed .item-feed {
+      background: #FFF; }
+      @media (max-width: 499px) {
+        .feed .box-feed .item-feed {
+          height: 230px; } }
+      @media (min-width: 500px) and (max-width: 749px) {
+        .feed .box-feed .item-feed {
+          height: 230px; } }
+      @media (min-width: 750px) and (max-width: 989px) {
+        .feed .box-feed .item-feed {
+          height: 320px; } }
+      @media (min-width: 990px) and (max-width: 1399px) {
+        .feed .box-feed .item-feed {
+          height: 314px; } }
+      @media (min-width: 1400px) {
+        .feed .box-feed .item-feed {
+          height: 390px; } }
+      @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
+        .feed .box-feed .item-feed:nth-child(2), .feed .box-feed .item-feed:nth-child(3), .feed .box-feed .item-feed:nth-child(5), .feed .box-feed .item-feed:nth-child(6), .feed .box-feed .item-feed:nth-child(8), .feed .box-feed .item-feed:nth-child(9) {
+          border-left: 2px solid #f7f7f7; } }
+      @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
+        .feed .box-feed .item-feed + .item-feed + .item-feed + .item-feed {
+          border-top: 2px solid #f7f7f7; } }
+      @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
+        .feed .box-feed .item-feed:nth-child(2), .feed .box-feed .item-feed:nth-child(4), .feed .box-feed .item-feed:nth-child(6), .feed .box-feed .item-feed:nth-child(8) {
+          border-left: 2px solid #f7f7f7; } }
+      @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
+        .feed .box-feed .item-feed + .item-feed + .item-feed {
+          border-top: 2px solid #f7f7f7; } }
+      @media (max-width: 499px) {
+        .feed .box-feed .item-feed + .item-feed {
+          border-top: 2px solid #f7f7f7; } }
+      @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
+        .feed .box-feed .item-feed:last-child {
+          display: none; } }
+
+.pesquisar {
+  display: none;
+  background-color: #999;
+  line-height: 1.3; }
+  @media (max-width: 499px) {
+    .pesquisar {
+      padding: 75px 0; } }
+  @media (min-width: 500px) and (max-width: 749px) {
+    .pesquisar {
+      padding: 75px 0; } }
+  @media (min-width: 750px) and (max-width: 989px) {
+    .pesquisar {
+      padding: 90px 0; } }
+  @media (min-width: 990px) and (max-width: 1399px) {
+    .pesquisar {
+      padding: 90px 0; } }
+  @media (min-width: 1400px) {
+    .pesquisar {
+      padding: 112px 0; } }
+  .pesquisar form {
+    overflow: hidden;
+    border: 1px solid #FFF;
+    margin: 0 auto;
+    position: relative; }
     @media (max-width: 499px) {
-      .feed .box-feed .item-feed + .item-feed {
-        border-top: 2px solid #f7f7f7; } }
-    @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-      .feed .box-feed .item-feed:last-child {
-        display: none; } }
+      .pesquisar form {
+        width: 100%;
+        border-radius: 12px; } }
+    @media (min-width: 500px) and (max-width: 749px) {
+      .pesquisar form {
+        width: 340px;
+        border-radius: 12px; } }
+    @media (min-width: 750px) and (max-width: 989px) {
+      .pesquisar form {
+        width: 420px;
+        border-radius: 12px; } }
+    @media (min-width: 990px) and (max-width: 1399px) {
+      .pesquisar form {
+        width: 420px;
+        border-radius: 12px; } }
+    @media (min-width: 1400px) {
+      .pesquisar form {
+        width: 500px;
+        border-radius: 15px; } }
+    .pesquisar form input {
+      display: inline-block;
+      width: 100%;
+      background-color: transparent;
+      border: none; }
+      @media (max-width: 499px) {
+        .pesquisar form input {
+          padding: 15px 20px;
+          padding-right: 90px;
+          font-size: 14px; } }
+      @media (min-width: 500px) and (max-width: 749px) {
+        .pesquisar form input {
+          padding: 15px 20px;
+          padding-right: 90px;
+          font-size: 14px; } }
+      @media (min-width: 750px) and (max-width: 989px) {
+        .pesquisar form input {
+          padding: 15px 20px;
+          padding-right: 100px;
+          font-size: 14px; } }
+      @media (min-width: 990px) and (max-width: 1399px) {
+        .pesquisar form input {
+          padding: 15px 20px;
+          padding-right: 100px;
+          font-size: 14px; } }
+      @media (min-width: 1400px) {
+        .pesquisar form input {
+          padding: 18px 25px;
+          padding-right: 125px;
+          font-size: 14px; } }
+    .pesquisar form button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      color: #FFF;
+      background-color: transparent;
+      border: none; }
+      @media (max-width: 499px) {
+        .pesquisar form button {
+          width: 90px;
+          font-size: 14px; } }
+      @media (min-width: 500px) and (max-width: 749px) {
+        .pesquisar form button {
+          width: 90px;
+          font-size: 14px; } }
+      @media (min-width: 750px) and (max-width: 989px) {
+        .pesquisar form button {
+          width: 100px;
+          font-size: 14px; } }
+      @media (min-width: 990px) and (max-width: 1399px) {
+        .pesquisar form button {
+          width: 100px;
+          font-size: 14px; } }
+      @media (min-width: 1400px) {
+        .pesquisar form button {
+          width: 125px;
+          font-size: 14px; } }
 
 /*# sourceMappingURL=feed.css.map */
