@@ -1,11 +1,3 @@
-.inicioaberto {
-  overflow: hidden; }
-  @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-    .inicioaberto {
-      padding-right: 15px; } }
-  .inicioaberto > * {
-    overflow: hidden; }
-
 .inicio {
   z-index: 10;
   background: #0d4b8a;

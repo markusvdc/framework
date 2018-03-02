@@ -21,6 +21,19 @@ $(document).ready(function(){
    $('.introslider2 .carousel-cell button').on('click', function(){
        console.log('teste');
    });
+
+   /* ---------------------------------------------------------------------------------------
+   *    Slider
+   * --------------------------------------------------------------------------------------*/
+   $('#carrossel').flexslider({
+       animation: "slide",
+       slideshow: false,
+       animationLoop: false,
+       itemWidth: 360,
+       itemMargin: 30,
+       controlsContainer: $(".slider .paginacao-controlesslider"),
+       customDirectionNav: $(".slider .controlesslider > a")
+   });
 });
 
 $(window).on('load', function(){
