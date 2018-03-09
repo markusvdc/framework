@@ -10,64 +10,323 @@
     display: none
 
 main
-    padding: 100px 0
+    padding: 0 0 100px
     background-color: #f7f7f7
 
 .feed
-    display: none
+    margin-top: 60px
     .box-feed
-        box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15)
-        background-color: #FFF
-        @media #{$celular}
-            border-radius: 15px
-        @media #{$celularh}
-            border-radius: 15px
-        @media #{$tablet}
-            border-radius: 15px
-        @media #{$notebook}
-            border-radius: 15px
-        @media #{$desktop}
-            border-radius: 20px
         overflow: hidden
         .item-feed
-            // border: 1px solid #eee
+            cursor: pointer
+            position: relative
             background: #FFF
+            border: 1px solid #f7f7f7
             @media #{$celular}
                 height: 230px
             @media #{$celularh}
-                height: 230px
+                height: 240px
+                padding: 35px 40px
+                padding-bottom: 0
             @media #{$tablet}
-                height: 320px
+                height: 260px
+                padding: 35px 40px
+                padding-bottom: 0
             @media #{$notebook}
-                height: 314px
+                height: 240px
+                padding: 35px 40px
+                padding-bottom: 0
             @media #{$desktop}
-                height: 390px
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(5),
-            &:nth-child(6),
-            &:nth-child(8),
-            &:nth-child(9)
-                @media #{$notebook}, #{$desktop}
-                    border-left: 2px solid #f7f7f7
-            &+.item-feed+.item-feed+.item-feed
-                @media #{$notebook}, #{$desktop}
-                    border-top: 2px solid #f7f7f7
-            &:nth-child(2),
-            &:nth-child(4),
-            &:nth-child(6),
-            &:nth-child(8)
+                height: 290px
+                padding: 50px
+                padding-bottom: 0
+            &::before
+                content: ''
+                @include prefix(transition, opacity .4s ease, webkit ms moz o)
+                opacity: 0
+                position: absolute
+                left: 0
+                top: 0
+                height: 100%
+                width: 100%
+
+            &:hover
+                &::before
+                    opacity: 1
+                .icone-feed
+                    background: transparent
+                    &::before
+                        opacity: 0
+                h3,
+                .tags,
+                date
+                    color: #FFF
+                svg
+                    @include prefix(transform, scale(1.6), webkit ms moz o)
+
+    .icone-feed
+        display: block
+        margin: 0 auto
+        text-align: center
+        position: relative
+        z-index: 2
+        overflow: hidden
+        border-radius: 7px
+        @media #{$celular}
+        @media #{$celularh}
+            width: 48px
+            height: 48px
+        @media #{$tablet}
+            width: 48px
+            height: 48px
+        @media #{$notebook}
+            width: 48px
+            height: 48px
+        @media #{$desktop}
+            width: 60px
+            height: 60px
+        // box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15)
+        &::before
+            content: ''
+            @include prefix(transition, opacity .2s ease, webkit ms moz o)
+            position: absolute
+            left: 0
+            top: 0
+            height: 100%
+            width: 100%
+        svg
+            position: relative
+            z-index: 3
+            @include prefix(transition, transform .2s ease, webkit ms moz o)
+            @media #{$celular}
+            @media #{$celularh}
+                margin-top: 15px
+                width: 16px
+                height: 16px
+            @media #{$tablet}
+                margin-top: 15px
+                width: 16px
+                height: 16px
+            @media #{$notebook}
+                margin-top: 15px
+                width: 16px
+                height: 16px
+            @media #{$desktop}
+                margin-top: 19px
+                width: 20px
+                height: 20px
+            path, polygon
+                fill: #FFF
+    h3
+        @include prefix(transition, color .2s ease, webkit ms moz o)
+        position: relative
+        z-index: 2
+        line-height: 1.3
+        color: #000
+        font-family: 'Roboto'
+        @media #{$celular}
+        @media #{$celularh}
+            height: 72px
+            margin-top: 15px
+            font-size: 14px
+        @media #{$tablet}
+            height: 90px
+            margin-top: 15px
+            font-size: 14px
+        @media #{$notebook}
+            height: 72px
+            margin-top: 15px
+            font-size: 14px
+            font-weight: 200
+        @media #{$desktop}
+            height: 92px
+            margin-top: 25px
+            font-size: 18px
+            font-weight: 200
+    .tags,
+    date
+        @include prefix(transition, color .2s ease, webkit ms moz o)
+        position: relative
+        z-index: 2
+        font-family: Arial
+        @media #{$celular}
+        @media #{$celularh}
+            color: #CCC
+            font-size: 12px
+        @media #{$tablet}
+            color: #CCC
+            font-size: 12px
+        @media #{$notebook}
+            color: #CCC
+            font-size: 12px
+        @media #{$desktop}
+            color: #ddd
+            font-size: 13px
+    .tags
+        @media #{$celular}
+        @media #{$celularh}
+            margin-top: 8px
+        @media #{$tablet}
+            margin-top: 8px
+        @media #{$notebook}
+            margin-top: 8px
+        @media #{$desktop}
+            margin-top: 10px
+    date
+        display: block
+        @media #{$celular}
+        @media #{$celularh}
+            margin-top: 4px
+        @media #{$tablet}
+            margin-top: 4px
+        @media #{$notebook}
+            margin-top: 4px
+        @media #{$desktop}
+            margin-top: 6px
+    .medium
+        &::before
+            @include prefix(background, linear-gradient(135deg, #1ba87e 0%,#23d29d 100%), webkit moz)
+        .icone-feed
+            &::before
+                @include prefix(background, linear-gradient(135deg, #1ba87e 0%,#23d29d 100%), webkit moz)
+    .tableless
+        &::before
+            @include prefix(background, linear-gradient(135deg, #e81f2a 0%,#e95b61 100%), webkit moz)
+        .icone-feed
+            &::before
+                @include prefix(background, linear-gradient(135deg, #e81f2a 0%,#e95b61 100%), webkit moz)
+    .autonomo
+        &::before
+            @include prefix(background, linear-gradient(135deg, #4a70fa 0%,#27a0f2 100%), webkit moz)
+        .icone-feed
+            &::before
+                @include prefix(background, linear-gradient(135deg, #4a70fa 0%,#27a0f2 100%), webkit moz)
+
+.categorias
+    border-top: 100px #3489f5 solid
+    background-color: #FFF
+    @media #{$celular}
+    @media #{$celularh}
+        padding: 50px 0
+    @media #{$tablet}
+        padding: 50px 0
+    @media #{$notebook}
+        padding: 55px 0
+    @media #{$desktop}
+        padding: 70px 0
+    ul
+        float: left
+        @media #{$celular}
+        @media #{$celularh}
+        @media #{$tablet}
+        @media #{$notebook}
+            margin-left: 205px
+        @media #{$desktop}
+            margin-left: 255px
+        li
+            float: left
+            text-align: center
+            position: relative
+            cursor: pointer
+            @media #{$celular}
+            @media #{$celularh}
+                padding: 0 25px
+            @media #{$tablet}
+                padding: 0 35px
+            @media #{$notebook}
+                padding: 0 40px
+            @media #{$desktop}
+                padding: 0 50px
+            &:first-child
                 @media #{$celularh}, #{$tablet}
-                    border-left: 2px solid #f7f7f7
-            &+.item-feed+.item-feed
-                @media #{$celularh}, #{$tablet}
-                    border-top: 2px solid #f7f7f7
-            &+.item-feed
+                    padding-left: 0
+            .icone-categorias
+                display: block
+                font-size: 0
+                svg
+                    // @include prefix(transition, transform .2s ease, webkit ms moz o)
+                    path, polygon, rect
+                        @include prefix(transition, fill .2s ease, webkit ms moz o)
+                        fill: #CCC
+                &.tam1
+                    svg
+                        width: 18px
+                        height: 22px
+                &.tam2
+                    svg
+                        width: 22px
+                        height: 22px
+            .nome-categorias
+                @include prefix(transition, color .2s ease, webkit ms moz o)
+                display: block
+                font-family: 'Roboto'
+                letter-spacing: 1px
+                color: #CCC
                 @media #{$celular}
-                    border-top: 2px solid #f7f7f7
-            &:last-child
-                @media #{$celularh}, #{$tablet}
-                    display: none
+                @media #{$celularh}
+                    font-size: 14px
+                    margin-top: 13px
+                @media #{$tablet}
+                    font-size: 14px
+                    margin-top: 13px
+                @media #{$notebook}
+                    font-size: 14px
+                    margin-top: 13px
+                    font-weight: 200
+                @media #{$desktop}
+                    margin-top: 17px
+                    font-weight: 200
+            &+li
+                &:before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    background: #f7f7f7
+                    @media #{$celular}
+                    @media #{$celularh}
+                        top: 12px
+                        height: 28px
+                        width: 2px
+                    @media #{$tablet}
+                        top: 14px
+                        height: 28px
+                        width: 2px
+                    @media #{$notebook}
+                        top: 14px
+                        height: 28px
+                        width: 2px
+                    @media #{$desktop}
+                        top: 12px
+                        height: 32px
+                        width: 2px
+            &.ativo,
+            &:hover
+                .nome-categorias
+                    color: #3489f5
+                svg
+                    // @include prefix(transform, scale(1.3), webkit ms moz o)
+                    path, polygon, rect
+                        fill: #3489f5
+    .pesquisar-categorias
+        float: right
+        border: none
+        padding: 0
+        background-color: transparent
+        @media #{$celular}
+        @media #{$celularh}
+            margin-top: 15px
+        @media #{$tablet}
+            margin-top: 15px
+        @media #{$notebook}
+            margin-top: 15px
+        @media #{$desktop}
+            margin-top: 18px
+        svg
+            width: 17px
+            height: 17px
+            fill: #4a70fa
+
+
 
 .pesquisar
     display: none
