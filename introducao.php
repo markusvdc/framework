@@ -1,4 +1,4 @@
-<?php include 'includes/site-metas.php';?>
+    <?php include 'includes/site-metas.php';?>
     <title>Introdução - Framework</title>
 </head>
 <body class="inicioaberto introducao">
@@ -6,72 +6,25 @@
 
     <main>
 
-        <!-- <div class="banner banneraltura">
-            <div class="table">
-                <div class="cell-table">
-                    <p>Banner com altura da tela menos cabeçalho</p>
-                </div>
-            </div>
-        </div> -->
-
         <div class="introicones">
             <div class="container">
                 <ul class="row">
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/instagram.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/facebook.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/twitter.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/tableless.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/linkedin.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/github.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/medium.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo2.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo3.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/codigo4.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/infinito.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/monitor.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/artigos.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/celular.svg') ?></li>
-                    <li class="pad-row desk1 tam2"><?= file_get_contents('assets/img/icones/email.svg') ?></li>
-                    <li class="pad-row desk1"><?= file_get_contents('assets/img/icones/lupa.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/instagram.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/facebook.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/twitter.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/tableless.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/linkedin.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/github.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/medium.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4 tam2"><?= file_get_contents('assets/img/icones/codigo.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4 tam2"><?= file_get_contents('assets/img/icones/codigo4.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4 tam2"><?= file_get_contents('assets/img/icones/infinito.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/monitor.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/artigos.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4 tam2"><?= file_get_contents('assets/img/icones/celular.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4 tam2"><?= file_get_contents('assets/img/icones/email.svg') ?></li>
+                    <li class="pad-row desk1 note1 tabl3 celh4 celu4"><?= file_get_contents('assets/img/icones/lupa.svg') ?></li>
                 </ul>
-            </div>
-        </div>
-
-        <div class="introicones2">
-            <div class="container">
-                <ul class="row">
-                    <li class="pad-row desk1"><i class="fab fa-fw fa-github-alt"></i></li>
-                    <li class="pad-row desk1"><i class="fab fa-fw fa-medium-m"></i></li>
-                    <li class="pad-row desk1"><i class="fab fa-fw fa-linkedin-in"></i></li>
-                    <li class="pad-row desk1"><i class="fas fa-fw fa-asterisk"></i></li>
-            </div>
-        </div>
-
-        <div class="introslider intropadrao">
-            <div class="container">
-                <div class="slider-lista-reservas">
-                    <div class="slider">
-                        <ul class="lista-slider">
-                            <?php for($i = 0; $i < 3; $i++) { ?>
-
-                            <li class="item-lista-slider">
-                                <img src="assets/img/foto1.jpg" alt="" style="width: 100%;">
-                            </li>
-
-                            <li class="item-lista-slider">
-                                <img src="assets/img/foto2.jpg" alt="" style="width: 100%;">
-                            </li>
-
-                            <?php } ?>
-                        </ul>
-                    </div>
-                    <div class="controlesslider">
-                        <a href="#" class="anterior-controlesslider flex-prev"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
-                        <div class="paginacao-controlesslider"></div>
-                        <a href="#" class="proximo-controlesslider flex-next"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -79,9 +32,6 @@
             <div class="container">
                 <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
                 <div class="carousel">
-                    <div class="carousel-cell"><button></button></div>
-                    <div class="carousel-cell"><button></button></div>
-                    <div class="carousel-cell"><button></button></div>
                     <div class="carousel-cell"><button></button></div>
                     <div class="carousel-cell"><button></button></div>
                     <div class="carousel-cell"><button></button></div>
@@ -100,11 +50,11 @@
                 <button id="testeMensagem" class="botao1" type="button" name="button">Mensagem</button>
                 <button class="botao1 abreVideo" type="button" name="button" data-video="VOa4XcXN0r0">Vídeo</button>
                 <button id="testeCarregar" class="botao1" type="button" name="button">Carregar</button>
-                <button id="testepop" class="botao1" type="button" name="button"
-                    data-imagem="http://192.168.0.230/framework/assets/img/foto1.jpg"
+                <button class="botao1 abrePortfolio" type="button" name="button"
+                    data-imagem="./assets/img/foto1.jpg"
                     data-nome="Nome produto"
-                    data-texto="Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada curabitur arcu erat."
-                >pop</button>
+                    data-texto="Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada curabitur arcu erat.">Portfolio</button>
+                <button id="testeSlideThumbs" class="botao1 cor1 tamanho1">Slider</button>
             </div>
         </section>
 
@@ -251,84 +201,11 @@
             </div>
         </section>
 
-
-        <!-- <section class="secao6 espacamento1">
-            <div class="container">
-                <div class="slider">
-                    <div class="conteudo-slider" id="carrossel">
-                        <ul class="slides lista-conteudo-slider">
-                            <li class="item-lista-conteudo-slider">
-                                <img src="assets/img/foto1.jpg" alt="">
-                            </li>
-                            <li class="item-lista-conteudo-slider">
-                                <img src="assets/img/foto2.jpg" alt="">
-                            </li>
-                            <li class="item-lista-conteudo-slider">
-                                <img src="assets/img/foto1.jpg" alt="">
-                            </li>
-                            <li class="item-lista-conteudo-slider">
-                                <img src="assets/img/foto2.jpg" alt="">
-                            </li>
-                            <li class="item-lista-conteudo-slider">
-                                <img src="assets/img/foto1.jpg" alt="">
-                            </li>
-                            <li class="item-lista-conteudo-slider">
-                                <img src="assets/img/foto2.jpg" alt="">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="controlesslider">
-                        <a href="#" class="anterior-controlesslider flex-prev"><?= file_get_contents('assets/img/icones/seta.svg') ?></a>
-                                    <div class="paginacao-controlesslider"></div>
-                                    <a href="#" class="proximo-controlesslider flex-next"><?= file_get_contents('assets/img/icones/seta.svg') ?></a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="secao7 espacamento1">
-            <div class="container">
-                <div class="select select1 placeholder inativo">
-                    <select name="" id="" disabled>
-                        <option value="" disabled selected>Assunto*</option>
-                        <option value="">Opção 1</option>
-                        <option value="">Opção 2</option>
-                        <option value="">Opção 3</option>
-                    </select>
-                    <span class="campo-select">
-                        <span class="texto-campo-select">Assunto*</span>
-                        <span class="seta-campo-select"><?= file_get_contents('assets/img/icones/seta.svg') ?></span>
-                    </span>
-                </div>
-            </div>
-        </section> -->
-
-
-        <section class="introgaleria" id="fotos">
-            <div class="container">
-                <hr style="border: none; border-top: 1px solid #DDD; margin: 50px 0">
-                <h2>Galeria de fotos do evento</h2>
-                <div class="lista-fotos efeitozoom">
-                    <ul class="row">
-                        <li class="pad-row desk4 note4 tabl6 celh6 celu6">
-                            <figure class="box-lista-fotos">
-                                <img src="assets/img/foto1.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li class="pad-row desk4 note4 tabl6 celh6 celu6">
-                            <figure class="box-lista-fotos">
-                                <img src="assets/img/foto2.jpg" alt="">
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
     <?php include 'includes/site-rodape.php';?>
 
-    <link rel="stylesheet" href="assets/css/introducao.css">
+    <link rel="stylesheet" href="assets/css/introduction.css">
     <script defer src="assets/js/introducao.js"></script>
 </body>
 </html>

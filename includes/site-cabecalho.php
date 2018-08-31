@@ -11,7 +11,7 @@
 </button>
 <header class="cabecalho">
     <div class="container">
-        <a href="#" class="logo-cabecalho">
+        <a href="." class="logo-cabecalho">
             <?= file_get_contents('assets/img/logo.svg') ?>
         </a>
         <div class="social-cabecalho">
@@ -23,9 +23,11 @@
     </div>
 </header>
 <header class="mcabecalho">
-    <a href="#" class="logo-cabecalho">
-        <?= file_get_contents('assets/img/logo.svg') ?>
-    </a>
+    <div class="container">
+        <a href="." class="logo-cabecalho">
+            <?= file_get_contents('assets/img/logo.svg') ?>
+        </a>
+    </div>
 </header>
 
 <!-- <header class="hcabecalho">

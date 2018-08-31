@@ -20,6 +20,28 @@
     <span class="fechar-modal"><?= file_get_contents('assets/img/icones/fechar-circulo.svg') ?></span>
 
     <div class="container">
+        <div class="wrap-slider2modal wrap-modal">
+            <div id="galleryModal">
+                <div class="carousel">
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                </div>
+            </div>
+
+            <div id="galleryModalNav">
+                <div class="carousel">
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                    <div class="carousel-cell"><button></button></div>
+                </div>
+            </div>
+        </div>
+
         <div class="wrap-portfoliomodal wrap-modal">
             <div class="imagem-portfoliomodal">
                 <img src="" alt="">
@@ -55,39 +77,6 @@
             </div>
         </div>
 
-        <div class="wrap-menumodal wrap-modal">
-            <nav class="menu-menumodal">
-                <?php include 'site-menu.php';?>
-            </nav>
-        </div>
-
-        <div class="wrap-slidermodal wrap-modal">
-            <div class="slider-videos">
-                <div class="slider">
-                    <ul class="lista-slider">
-                        <li class="item-lista-slider">
-                            <div class="imagem-slidermodal">
-                                <img src="assets/img/foto1.jpg" alt="">
-                            </div>
-                        </li>
-                        <li class="item-lista-slider">
-                            <div class="imagem-slidermodal">
-                                <img src="assets/img/foto2.jpg" alt="">
-                            </div>
-                            <!-- <div class="legenda-slidermodal">
-                                <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus</p>
-                            </div> -->
-                        </li>
-                    </ul>
-                </div>
-                <div class="controlesslider">
-                    <a href="#" class="anterior-controlesslider flex-prev"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
-                    <div class="paginacao-controlesslider"></div>
-                    <a href="#" class="proximo-controlesslider flex-next"><?= file_get_contents('assets/img/icones/seta2.svg') ?></a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
@@ -98,8 +87,6 @@
 <script async src="assets/js/libs/SmoothScroll.js"></script>
 <script async src="assets/js/libs/flickity.pkgd.min.js"></script>
 <script async src="assets/js/libs/mCustomScrollbar.js"></script>
-<script async src="assets/js/libs/jquery.enllax.custom.js"></script>
-<script async src="assets/js/libs/ScrollMagic.min.js"></script>
-<script async src="assets/js/libs/flexslider.js"></script>
+<script refer src="assets/js/modal.js"></script>
 <script refer src="assets/js/framework.js"></script>
 <script refer src="assets/js/geral.js"></script>

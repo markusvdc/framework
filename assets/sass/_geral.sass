@@ -15,9 +15,49 @@ strong
     font-weight: 600
 
 
+#modal
+    // load
+    &.carregarmodal
+        .icone-carregarmodal
+            width: 60px
+            height: 60px
+            margin-top: -30px
+            margin-left: -30px
+            border-top: 4px solid #FFF
+            border-right: 4px solid transparent
+    // close
+    .fechar-modal
+        line-height: 0
+        @media #{$celular}, #{$celularh}
+        @media #{$tablet}, #{$notebook}
+        @media #{$desktop}
+            top: 30px
+            right: 30px
+        svg
+            @media #{$celular}, #{$celularh}
+            @media #{$tablet}, #{$notebook}
+            @media #{$desktop}
+                width: 44px
+                height: 44px
+            path, polygon
+                fill: #FFF
+    // text
+    .texto-modal
+        p
+            color: #FFF
+            @media #{$celular}, #{$celularh}
+                font-size: 20px
+                line-height: 26px
+            @media #{$tablet}, #{$notebook}
+                font-size: 24px
+                line-height: 32px
+            @media #{$desktop}
+                font-size: 26px
+                line-height: 34px
+        .icone-texto-modal
+            svg
+                path, polygon, rect
+                    fill: #FFF
 
-// ----------------------------------------------------------------------------------------
-// Bordas arredondadas
-// ----------------------------------------------------------------------------------------
-.arredondado50
-    @include prefix(border-radius, 50%, webkit ms moz o)
+.mascara
+    background: rgba(0,0,0,0.6)

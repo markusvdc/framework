@@ -53,14 +53,8 @@
             position: absolute
             top: 50%
             left: 50%
-            width: 60px
-            height: 60px
-            margin-top: -30px
-            margin-left: -30px
-            border-radius: 50%
-            border-top: 4px solid #FFF
-            border-right: 4px solid transparent
             animation: girar 1s linear infinite
+            border-radius: 50%
 
     // ----------------------------------------------------------------------------------------
     // MODAL: Texto padrão
@@ -101,35 +95,6 @@
                 @media #{$desktop}
                     width: 37px
                     height: 37px
-
-// ----------------------------------------------------------------------------------------
-//
-//
-//                                  MODAL
-//
-//
-// ----------------------------------------------------------------------------------------
-
-#modal
-    // ----------------------------------------------------------------------------------------
-    // MODAL: Fechar
-    // ----------------------------------------------------------------------------------------
-    .fechar-modal
-        line-height: 0
-        @media #{$celular}, #{$celularh}
-        @media #{$tablet}, #{$notebook}
-        @media #{$desktop}
-            top: 30px
-            right: 30px
-        svg
-            @media #{$celular}, #{$celularh}
-            @media #{$tablet}, #{$notebook}
-            @media #{$desktop}
-                width: 44px
-                height: 44px
-            path, polygon
-                fill: #FFF
-
     // ----------------------------------------------------------------------------------------
     // MODAL: Fechar
     // ----------------------------------------------------------------------------------------
@@ -148,26 +113,6 @@
                 margin-top: 10px
             @media #{$tablet}, #{$notebook}, #{$desktop}
                 margin-top: 20px
-
-    // ----------------------------------------------------------------------------------------
-    // MODAL: Texto padrão
-    // ----------------------------------------------------------------------------------------
-    .texto-modal
-        p
-            color: #FFF
-            @media #{$celular}, #{$celularh}
-                font-size: 20px
-                line-height: 26px
-            @media #{$tablet}, #{$notebook}
-                font-size: 24px
-                line-height: 32px
-            @media #{$desktop}
-                font-size: 26px
-                line-height: 34px
-        .icone-texto-modal
-            svg
-                path, polygon, rect
-                    fill: #FFF
 
 // ----------------------------------------------------------------------------------------
 //
@@ -188,7 +133,6 @@
     bottom: -1px
     left: 0
     display: none
-    background: $cor1
 
 // ----------------------------------------------------------------------------------------
 // MASCARA: Condição aberta
@@ -237,3 +181,190 @@ body
                 a
                     &.flex-active
                         color: #FFF
+
+
+// ----------------------------------------------------------------------------------------
+// Menu Modal
+// ----------------------------------------------------------------------------------------
+#mmodal
+    position: fixed
+    top: 0
+    height: 100%
+    background: rgba(13, 76, 140, 0.98)
+    z-index: 5
+    @include prefix(transition, right .5s, webkit ms moz o)
+    @media #{$celular}
+        width: 100%
+        right: -100%
+        padding-top: 130px
+    @media #{$celularh}
+        width: 460px
+        right: -460px
+        padding-top: 60px
+    @media #{$tablet}
+        width: 480px
+        right: -480px
+        padding-top: 130px
+    @media #{$notebook}
+        width: 480px
+        right: -480px
+        padding-top: 130px
+    @media #{$desktop}
+        width: 600px
+        right: -600px
+        padding-top: 160px
+    &.ativo
+        right: 0
+    .menu-mmodal
+        text-align: center
+        li
+            &+li
+                @media #{$celular}
+                    margin-top: 10px
+                @media #{$celularh}
+                    margin-top: 10px
+                @media #{$tablet}
+                    margin-top: 15px
+                @media #{$notebook}
+                    margin-top: 15px
+                @media #{$desktop}
+                    margin-top: 20px
+            a
+                color: #FFF
+                font-weight: 500
+                text-transform: uppercase
+                @media #{$celular}
+                    font-size: 16px
+                @media #{$celularh}
+                    font-size: 16px
+                @media #{$tablet}
+                    font-size: 20px
+                @media #{$notebook}
+                    font-size: 20px
+                @media #{$desktop}
+                    font-size: 24px
+    .social-mmodal
+        text-align: center
+        font-size: 0
+        @media #{$celular}
+            margin-top: 20px
+        @media #{$celularh}
+            margin-top: 20px
+        @media #{$tablet}
+            margin-top: 35px
+        @media #{$notebook}
+            margin-top: 35px
+        @media #{$desktop}
+            margin-top: 40px
+        li
+            display: inline-block
+            &+li
+                @media #{$celular}, #{$celularh}
+                    margin-left: 10px
+                @media #{$tablet}, #{$notebook}
+                    margin-left: 10px
+                @media #{$desktop}
+                    margin-left: 13px
+            a
+                border-radius: 50%
+                border: 2px solid #FFF
+                background: #FFF
+                @media #{$celular}, #{$celularh}
+                    width: 28px
+                    height: 28px
+                @media #{$tablet}, #{$notebook}
+                    width: 32px
+                    height: 32px
+                @media #{$desktop}
+                    width: 40px
+                    height: 40px
+                svg
+                    @media #{$celular}, #{$celularh}
+                        margin-top: 5px
+                        width: 13px
+                        height: 13px
+                    @media #{$tablet}, #{$notebook}
+                        margin-top: 6px
+                        width: 15px
+                        height: 15px
+                    @media #{$desktop}
+                        margin-top: 10px
+                        width: 17px
+                        height: 17px
+                    path,
+                    polygon
+                        fill: $cor2
+
+// ----------------------------------------------------------------------------------------
+// Menu Modal Icone
+// ----------------------------------------------------------------------------------------
+#mmenu
+    position: fixed
+    border: none
+    background: none
+    padding: 0
+    margin: 0
+    z-index: 6
+    @include prefix(transform, rotate(0deg), webkit ms moz o)
+    @include prefix(transition, .5s ease-in-out, webkit ms moz o)
+    cursor: pointer
+    @media #{$celular}, #{$celularh}, #{$tablet}
+        width: 30px
+        height: 20px
+        right: 15px
+        top: 17px
+    @media #{$celularh}
+        right: 50%
+        top: 19px
+        margin-right: -230px
+    @media #{$tablet}
+        right: 50%
+        top: 19px
+        margin-right: -320px
+    @media #{$notebook}, #{$desktop}
+        width: 36px
+        height: 23px
+        right: 20px
+        top: 20px
+        display: none
+    span
+        display: block
+        position: absolute
+        width: 100%
+        background: $cor1
+        opacity: 1
+        left: 0
+        @include prefix(transform, rotate(0deg), webkit ms moz o)
+        @include prefix(transition, .25s ease-in-out, webkit ms moz o)
+        height: 3px
+        &:nth-child(1)
+            top: 0px
+        &:nth-child(2), &:nth-child(3)
+            @media #{$celular}, #{$celularh}, #{$tablet}
+                top: 8px
+            @media #{$notebook}, #{$desktop}
+                top: 10px
+        &:nth-child(4)
+            @media #{$celular}, #{$celularh}, #{$tablet}
+                top: 16px
+            @media #{$notebook}, #{$desktop}
+                top: 20px
+    &.ativo span
+        &:nth-child(1)
+            width: 0%
+            left: 50%
+            @media #{$celular}, #{$celularh}, #{$tablet}
+                top: 15px
+            @media #{$notebook}, #{$desktop}
+                top: 18px
+        &:nth-child(2)
+            @include prefix(transform, rotate(45deg), webkit ms moz o)
+        &:nth-child(3)
+            @include prefix(transform, rotate(-45deg), webkit ms moz o)
+        &:nth-child(4)
+            width: 0%
+            left: 50%
+            @media #{$celular}, #{$celularh}, #{$tablet}
+                top: 15px
+            @media #{$notebook}, #{$desktop}
+                top: 18px
