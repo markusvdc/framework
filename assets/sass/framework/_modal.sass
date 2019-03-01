@@ -7,7 +7,7 @@
 // ----------------------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------------------
-// MODAL: Estrutura
+// MODAL: Structure
 // ----------------------------------------------------------------------------------------
 #modal
     z-index: 11
@@ -19,13 +19,15 @@
     display: none
     overflow-y: auto
     overflow-x: hidden
+    align-items: center
+    justify-content: center
     .wrap-modal
         display: none
 
     // ----------------------------------------------------------------------------------------
-    // MODAL: Fechar
+    // MODAL: Close
     // ----------------------------------------------------------------------------------------
-    .fechar-modal
+    .close-modal
         position: absolute
         cursor: pointer
         background: transparent
@@ -33,33 +35,33 @@
         text-align: center
 
     // ----------------------------------------------------------------------------------------
-    // MODAL: Condição forçar
+    // MODAL: Force condition
     // ----------------------------------------------------------------------------------------
-    &.forcamodal
-        .fechar-modal
+    &.forcemodal
+        .close-modal
             display: none
 
     // ----------------------------------------------------------------------------------------
-    // MODAL: Imagem
+    // MODAL: Image
     // ----------------------------------------------------------------------------------------
-    &.imagemmodal
+    &.image-modal
         text-align: center
 
     // ----------------------------------------------------------------------------------------
-    // MODAL: Carregar
+    // MODAL: Loading
     // ----------------------------------------------------------------------------------------
-    &.carregarmodal
-        .icone-carregarmodal
+    &.loadingmodal
+        .icon-loadingmodal
             position: absolute
             top: 50%
             left: 50%
-            animation: girar 1s linear infinite
+            animation: rotate 1s linear infinite
             border-radius: 50%
 
     // ----------------------------------------------------------------------------------------
-    // MODAL: Texto padrão
+    // MODAL: Text default
     // ----------------------------------------------------------------------------------------
-    .texto-modal
+    .text-modal
         overflow: hidden
         text-align: center
         p
@@ -78,7 +80,7 @@
                 max-width: 880px
             @media #{$desktop}
                 max-width: 1070px
-        .icone-texto-modal
+        .icon-text-modal
             display: inline-block
             vertical-align: middle
             text-align: left
@@ -96,18 +98,18 @@
                     width: 37px
                     height: 37px
     // ----------------------------------------------------------------------------------------
-    // MODAL: Fechar
+    // MODAL: Close
     // ----------------------------------------------------------------------------------------
-    &.imagemmodal
-        .legenda-imagemmodal
+    &.image-modal
+        .label-image-modal
             p
                 @media #{$celular}, #{$celularh}
                     padding-top: 10px
                 @media #{$tablet}, #{$notebook}, #{$desktop}
                     padding-top: 20px
 
-    &.mensagemmodal
-        .botao-mensagemmodal
+    &.messagemodal
+        .button-messagemodal
             text-align: center
             @media #{$celular}, #{$celularh}
                 margin-top: 10px
@@ -117,15 +119,15 @@
 // ----------------------------------------------------------------------------------------
 //
 //
-//                                  MASCARA
+//                                  Mask
 //
 //
 // ----------------------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------------------
-// MASCARA: Base
+// Mask: Base
 // ----------------------------------------------------------------------------------------
-.mascara
+.mask
     z-index: 10
     position: fixed
     top: 0
@@ -135,10 +137,10 @@
     display: none
 
 // ----------------------------------------------------------------------------------------
-// MASCARA: Condição aberta
+// Mask: Open condition
 // ----------------------------------------------------------------------------------------
 body
-    &.mascaraaberta
+    &.maskopen
         overflow: hidden
         @media #{$notebook}, #{$desktop}
             padding-right: 15px
@@ -213,7 +215,7 @@ body
         width: 600px
         right: -600px
         padding-top: 160px
-    &.ativo
+    &.active
         right: 0
     .menu-mmodal
         text-align: center
@@ -296,7 +298,7 @@ body
                         fill: $cor2
 
 // ----------------------------------------------------------------------------------------
-// Menu Modal Icone
+// Menu modal icon
 // ----------------------------------------------------------------------------------------
 #mmenu
     position: fixed
@@ -311,7 +313,7 @@ body
     @media #{$celular}, #{$celularh}, #{$tablet}
         width: 30px
         height: 20px
-        right: 15px
+        right: 20px
         top: 17px
     @media #{$celularh}
         right: 50%
@@ -349,7 +351,7 @@ body
                 top: 16px
             @media #{$notebook}, #{$desktop}
                 top: 20px
-    &.ativo span
+    &.active span
         &:nth-child(1)
             width: 0%
             left: 50%

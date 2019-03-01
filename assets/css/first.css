@@ -1,4 +1,4 @@
-.inicio {
+.first {
   z-index: 10;
   background: #0d4b8a;
   position: fixed;
@@ -10,50 +10,50 @@
   overflow: hidden;
 }
 
-.logo-inicio {
+.logo-first {
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 11;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  .logo-inicio {
+  .logo-first {
     margin-left: -70px;
     margin-top: -70px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  .logo-inicio {
+  .logo-first {
     margin-left: -110px;
     margin-top: -130px;
   }
 }
 @media (min-width: 1400px) {
-  .logo-inicio {
+  .logo-first {
     margin-left: -25px;
     margin-top: -145px;
   }
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  .logo-inicio svg {
+  .logo-first svg {
     width: 140px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  .logo-inicio svg {
+  .logo-first svg {
     width: 220px;
   }
 }
 @media (min-width: 1400px) {
-  .logo-inicio svg {
+  .logo-first svg {
     width: 50px;
   }
 }
-.logo-inicio svg path {
+.logo-first svg path {
   fill: #fd4577;
 }
 
-.icone-inicio {
+.icon-first {
   position: fixed;
   z-index: 11;
   top: 50%;
@@ -64,16 +64,16 @@
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-animation: girar 1s linear infinite;
-  -ms-animation: girar 1s linear infinite;
-  -moz-animation: girar 1s linear infinite;
-  -o-animation: girar 1s linear infinite;
-  animation: girar 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite;
+  -ms-animation: rotate 1s linear infinite;
+  -moz-animation: rotate 1s linear infinite;
+  -o-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
   border-top-color: #fd4577;
   border-top-style: solid;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  .icone-inicio {
+  .icon-first {
     margin-top: 15px;
     border-top-width: 2px;
     border-right: 2px solid transparent;
@@ -83,7 +83,7 @@
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  .icone-inicio {
+  .icon-first {
     margin-top: 10px;
     border-top-width: 2px;
     border-right: 2px solid transparent;
@@ -93,46 +93,13 @@
   }
 }
 @media (min-width: 1400px) {
-  .icone-inicio {
+  .icon-first {
     margin-top: 10px;
     border-top-width: 4px;
     border-right: 3px solid transparent;
     margin-left: -23px;
     width: 46px;
     height: 46px;
-  }
-}
-
-@-webkit-keyframes girar {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes girar {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 

@@ -8,8 +8,11 @@ body
     color: #444
     background: #f7f7f7
 
+.introbanner
+    background: url(../img/picture1.jpg) no-repeat center center
+    @include prefix(background-size, cover, webkit ms moz o)
+
 .intropadrao
-    p
     .botoes-intropadrao
         margin-top: 20px
 
@@ -52,7 +55,7 @@ body
         width: 4px
         background: $cor1
 
-.introformulario
+.introformulary
     .campos
         width: 50%
         textarea
@@ -79,29 +82,14 @@ body
     &:hover
         background-color: #EEE
 
-.banner
-    // background-image: url(../img/banner.jpg)
-    @include prefix(background-size, cover, webkit ms moz o)
-    background-repeat: no-repeat
-    background-position: center center
-    position: relative
-    height: 400px
-    background: $cor2
-    p
-        text-transform: uppercase
-        text-align: center
-        color: #FFF
-        font-size: 34px
-        font-weight: 500
-
-.cabecalho
+.header
     background: #FFF
     height: 70px
     padding-top: 16px
     border-bottom: 1px solid #EEE
     @media #{$celular}, #{$celularh}, #{$tablet}
         display: none
-    .logo-cabecalho
+    .logo-header
         line-height: 0
         float: left
         svg
@@ -109,7 +97,7 @@ body
             height: 26px
             path
                 fill: $cor1
-    .menu-cabecalho
+    .menu-header
         float: right
         margin-left: 20px
         margin-top: 9px
@@ -148,26 +136,26 @@ body
                     @media #{$notebook}, #{$desktop}
                         @include prefix(transform, scale(1.05), webkit ms moz o)
 
-.introabas
-    .menu-abas
-        li
+.introtabs
+    .menu-tabs
+        .item-menu-tabs
             display: inline-block
+    .content-tabs
+        .item-content-tabs
+            display: none
 
-.rodape
+.footer
     padding-bottom: 100px
     margin-top: 100px
-    .labcom-rodape
+    .logo-footer
+        font-size: 0
         svg
-            @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
-                width: 75px
-                height: 33px
-            @media #{$desktop}
-                width: 93px
-                height: 38px
+            width: 38px
+            height: 38px
             path
                 fill: #000
-.social-cabecalho,
-.social-rodape
+.social-header,
+.social-footer
     float: right
     margin-left: 20px
     margin-top: 10px
@@ -190,14 +178,14 @@ body
 //     align-items: center
 //     justify-content: center
 
-.mcabecalho
+.mheader
     background: #FFF
     height: 60px
     padding-top: 17px
     border-bottom: 1px solid #EEE
     @media #{$notebook}, #{$desktop}
         display: none
-    .logo-cabecalho
+    .logo-header
         line-height: 0
         float: left
         margin-left: 30px
@@ -207,7 +195,7 @@ body
             path
                 fill: $cor1
 
-.introicones
+.introicons
     margin-top: 100px
     li
         font-size: 0

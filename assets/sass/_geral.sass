@@ -1,12 +1,12 @@
 // ----------------------------------------------------------------------------------------
-// Importações
+// Imports
 // ----------------------------------------------------------------------------------------
 @import 'framework'
 
 
 
 // ----------------------------------------------------------------------------------------
-// Estrutura
+// Structure
 // ----------------------------------------------------------------------------------------
 body
     font-family: $fonte1
@@ -17,8 +17,8 @@ strong
 
 #modal
     // load
-    &.carregarmodal
-        .icone-carregarmodal
+    &.loadingmodal
+        .icon-loadingmodal
             width: 60px
             height: 60px
             margin-top: -30px
@@ -26,23 +26,21 @@ strong
             border-top: 4px solid #FFF
             border-right: 4px solid transparent
     // close
-    .fechar-modal
+    .close-modal
         line-height: 0
-        @media #{$celular}, #{$celularh}
-        @media #{$tablet}, #{$notebook}
-        @media #{$desktop}
-            top: 30px
-            right: 30px
+        top: 30px
+        right: 30px
         svg
             @media #{$celular}, #{$celularh}
-            @media #{$tablet}, #{$notebook}
-            @media #{$desktop}
+                width: 36px
+                height: 36px
+            @media #{$tablet}, #{$notebook}, #{$desktop}
                 width: 44px
                 height: 44px
             path, polygon
                 fill: #FFF
     // text
-    .texto-modal
+    .text-modal
         p
             color: #FFF
             @media #{$celular}, #{$celularh}
@@ -54,10 +52,10 @@ strong
             @media #{$desktop}
                 font-size: 26px
                 line-height: 34px
-        .icone-texto-modal
+        .icon-text-modal
             svg
                 path, polygon, rect
                     fill: #FFF
 
-.mascara
+.mask
     background: rgba(0,0,0,0.6)

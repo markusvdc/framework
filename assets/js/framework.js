@@ -1,17 +1,17 @@
 /* ---------------------------------------------------------------------------------------
-*    Altura banner igual tela
+*    Banner screen height
 * --------------------------------------------------------------------------------------*/
-function alturaBanner() {
-    // $('.banneraltura').height(Math.max($(window).height(), 500));
-    $('.banneraltura').height(Math.max($(window).height(), 500) - $('.cabecalho').innerHeight());
+function bannerHeight() {
+    // $('.bannerheight').height(Math.max($(window).height(), 500));
+    $('.bannerheight').height(Math.max($(window).height(), 500) - $('.header').innerHeight());
 }
 
 
 
 /* ---------------------------------------------------------------------------------------
-*    Ancora
+*    Anchor links
 * --------------------------------------------------------------------------------------*/
-$('.ancora a').on('click', function(){
+$('.anchor a').on('click', function(){
     var href = $.attr(this, 'href');
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
@@ -25,33 +25,33 @@ $('.ancora a').on('click', function(){
 
 $(document).ready(function(){
     /* ---------------------------------------------------------------------------------------
-    *    Dispara altura banner
+    *    Triggers
     * --------------------------------------------------------------------------------------*/
-    alturaBanner();
+    bannerHeight();
 
 
     /* ---------------------------------------------------------------------------------------
-    *    Input check estilizado
+    *    Stylized input check
     * --------------------------------------------------------------------------------------*/
     $('.item-inputcheck').click(function(){
         $('input', this).prop('checked', !$('input', this)[0].checked);
-        $(this).toggleClass('ativo');
+        $(this).toggleClass('active');
     });
 
 
 
     /* ---------------------------------------------------------------------------------------
-    *    Input radio estilizado
+    *    Stylized input radio
     * --------------------------------------------------------------------------------------*/
     $('.inputradio label').click(function(){
-        $(this).closest('.inputradio').find('b').removeClass("ativo");
-        $('b', this).toggleClass("ativo");
+        $(this).closest('.inputradio').find('b').removeClass("active");
+        $('b', this).toggleClass("active");
     });
 
 
 
     /* ---------------------------------------------------------------------------------------
-    *    Select estilizado
+    *    Stylized select
     * --------------------------------------------------------------------------------------*/
     $("select").change(function(){
         $(this).closest('.select').removeClass('placeholder');
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
 
     /* ---------------------------------------------------------------------------------------
-    *    Máscara telefone
+    *    Phone mask
     * --------------------------------------------------------------------------------------*/
     // SPMaskBehavior = function (val) {
     //     return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -77,43 +77,43 @@ $(document).ready(function(){
 
 
     /* ---------------------------------------------------------------------------------------
-    *    Máscara CEP
+    *    ZIP mask
     * --------------------------------------------------------------------------------------*/
-    // $('.cepmask').mask('00000-000');
+    // $('.zipmask').mask('00000-000');
 
 
 
     /* ---------------------------------------------------------------------------------------
-    *    Abas
+    *    Tabs
     * --------------------------------------------------------------------------------------*/
-    $('.abas .menu-abas > li').click(function(){
-		var aba_id = $(this).attr('data-aba');
+    $('.tabs .menu-tabs .item-menu-tabs').click(function(){
+		var tab_id = $(this).attr('data-tab');
 
-		$('.abas .menu-abas > li').removeClass('ativo');
-		$(this).addClass('ativo');
+		$('.tabs .menu-tabs .item-menu-tabs').removeClass('active');
+		$(this).addClass('active');
 
-        $('.abas .conteudo-abas > li').hide();
-		$("#"+aba_id).fadeIn();
+        $('.tabs .content-tabs .item-content-tabs').hide();
+		$("#"+tab_id).fadeIn();
 	})
 });
 
 
 
 /* ---------------------------------------------------------------------------------------
-*    Loading inicial
+*    First loading
 * --------------------------------------------------------------------------------------*/
 $(window).on('load', function() {
     /* ---------------------------------------------------------------------------------------
     *    Custom Scrollbar
     * --------------------------------------------------------------------------------------*/
-    if ($('.rolagem').length) {
-        $(".rolagem").mCustomScrollbar();
+    if ($('.scroll').length) {
+        $(".scroll").mCustomScrollbar();
     };
 
     setTimeout(function(){
-        $('.inicio, .logo-inicio, .icone-inicio').fadeOut();
+        $('.first, .logo-first, .icon-first').fadeOut();
         setTimeout(function(){
-            $('body').removeClass('inicioaberto');
+            $('body').removeClass('firstopen');
         }, 500);
     }, 500);
 });
@@ -121,5 +121,5 @@ $(window).on('load', function() {
 
 
 $(window).resize(function(){
-    alturaBanner();
+    bannerHeight();
 }).trigger('resize');

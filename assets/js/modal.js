@@ -1,19 +1,16 @@
 /* ---------------------------------------------------------------------------------------
-*    Mascara
+*    Mask
 * --------------------------------------------------------------------------------------*/
-//Abrir
-function abreMascara() {
-    $('body').addClass('mascaraaberta');
-    $('.mascara').stop(false, false).fadeIn();
-    $('#modal').stop(false, false).fadeIn();
-    // setTimeout(function(){
-    //     centralizar();
-    // });
+//Open
+function openMask() {
+    $('body').addClass('maskopen');
+    $('.mask').stop(false, false).fadeIn();
+    $('#modal').css('display', 'flex');
 }
-//Fechar
-function fechaMascara() {
-    $('.mascara').fadeOut();
-    $('body').removeClass('mascaraaberta');
+//Close
+function fechaMask() {
+    $('.mask').fadeOut();
+    $('body').removeClass('maskopen');
     $('#modal').css('padding-top', 0);
 }
 
@@ -21,75 +18,73 @@ function fechaMascara() {
 /* ---------------------------------------------------------------------------------------
 *    Modal: menu mobile
 * --------------------------------------------------------------------------------------*/
-function fechaMmodal() {
-    $('#mmenu, #mmodal').toggleClass('ativo');
+function closeMmodal() {
+    $('#mmenu, #mmodal').toggleClass('active');
 }
 
-$('#mmodal .ancora a').on('click', function(){
-    fechaMmodal();
+$('#mmodal .anchor a').on('click', function(){
+    closeMmodal();
 });
 
 $('#mmenu').on('click', function(){
-    fechaMmodal();
+    closeMmodal();
 });
 
 
 /* ---------------------------------------------------------------------------------------
-*    Modal: Recursos comuns
+*    Modal: general resources
 * --------------------------------------------------------------------------------------*/
-//Fechar
-function fechaModal() {
+//Close
+function closeModal() {
     $('#modal, #modal .wrap-modal').hide();
-    $('.videomodal .videoresponsivo, .imagemmodal .legenda-imagemmodal').empty();
-    fechaMascara();
+    $('.videomodal .videoresponsive, .imagemodal .label-imagemodal').empty();
+    fechaMask();
 }
 
-$('#modal .fechar-modal').click(function(){
-    fechaModal();
+$('#modal .close-modal').click(function(){
+    closeModal();
 });
 
 
 
 /* ---------------------------------------------------------------------------------------
-*    Modal: Mensagem
+*    Modal: Message
 * --------------------------------------------------------------------------------------*/
-function mensagem(texto, icone, link, botao, classes) {
-    $('#modal').attr('class','mensagemmodal ' + classes);
-    $('.wrap-mensagemmodal p').html(texto);
-    $('.wrap-mensagemmodal .icone-texto-modal').html(icone);
-    if (botao){
-        $('.botao-mensagemmodal').show();
-        $('.botao-mensagemmodal a').html(botao).attr('href', link);
+function message(text, icon, link, button, classes) {
+    $('#modal').attr('class','messagemodal ' + classes);
+    $('.wrap-messagemodal p').html(text);
+    $('.wrap-messagemodal .icon-text-modal').html(icon);
+    if (button){
+        $('.button-messagemodal').show();
+        $('.button-messagemodal a').html(button).attr('href', link);
     }else{
-        $('.botao-mensagemmodal').hide();
+        $('.button-messagemodal').hide();
     }
-    $('.wrap-mensagemmodal').addClass('centraliza-modal');
-    $('.wrap-mensagemmodal').fadeIn();
-    abreMascara();
+    $('.wrap-messagemodal').fadeIn();
+    openMask();
 }
 
-//Icones
-$.get('./assets/img/icones/erro.svg', function(svg){ iconeCuidado = svg; }, 'text');
-$.get('./assets/img/icones/correto.svg', function(svg){ iconeSucesso = svg; }, 'text');
+//Icons
+$.get('./assets/img/icons/error.svg', function(svg){ iconWarning = svg; }, 'text');
+$.get('./assets/img/icons/correct.svg', function(svg){ iconSuccess = svg; }, 'text');
 
 
 
 /* ---------------------------------------------------------------------------------------
-*    Modal: Imagem
+*    Modal: Image
 * --------------------------------------------------------------------------------------*/
-function imagem(src, legenda, classes) {
-    $('#modal').attr('class','imagemmodal ' + classes);
-    $('.wrap-imagemmodal img').attr('src', src);
-    if (legenda){
-        $('.wrap-imagemmodal .legenda-imagemmodal').html('<p>' + legenda + '</p>');
+function image(src, label, classes) {
+    $('#modal').attr('class','imagemodal ' + classes);
+    $('.wrap-imagemodal img').attr('src', src);
+    if (label){
+        $('.wrap-imagemodal .label-imagemodal').html('<p>' + label + '</p>');
     }
-    $('.wrap-imagemmodal').addClass('centraliza-modal');
-    $('.wrap-imagemmodal').fadeIn();
-    abreMascara();
+    $('.wrap-imagemodal').fadeIn();
+    openMask();
 }
 //Click padrão
-$('.abreimagem').click(function(){
-    imagem($(this).attr('data-imagem'), $(this).attr('data-legenda'), $(this).attr('data-classes'));
+$('.openimage').click(function(){
+    image($(this).attr('data-image'), $(this).attr('data-label'), $(this).attr('data-classes'));
 });
 
 
@@ -99,13 +94,12 @@ $('.abreimagem').click(function(){
 * --------------------------------------------------------------------------------------*/
 function video(url){
     $('#modal').attr('class','videomodal');
-    $('.wrap-videomodal .videoresponsivo').append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + url + '?rel=0&amp;showinfo=0;autoplay=1" frameborder="0" allowfullscreen=""></iframe>');
-    $('.wrap-videomodal').addClass('centraliza-modal');
+    $('.wrap-videomodal .videoresponsive').append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + url + '?rel=0&amp;showinfo=0;autoplay=1" frameborder="0" allowfullscreen=""></iframe>');
     $('.wrap-videomodal').fadeIn();
-    abreMascara();
+    openMask();
 }
-//Click padrão
-$('.abreVideo').click(function(){
+//Click default
+$('.openVideo').click(function(){
     video($(this).attr('data-video'));
 });
 
@@ -113,29 +107,29 @@ $('.abreVideo').click(function(){
 /* ---------------------------------------------------------------------------------------
 *    Modal: Portfolio
 * --------------------------------------------------------------------------------------*/
-function portfolio(imagem, nome, texto) {
+function portfolio(image, name, text) {
     $('#modal').attr('class','portfoliomodal');
 
-    $('.wrap-portfoliomodal .imagem-portfoliomodal img').attr('src', imagem);
-    $('.wrap-portfoliomodal .nome-portfoliomodal').html(nome);
-    $('.wrap-portfoliomodal .texto-portfoliomodal p').html(texto);
+    $('.wrap-portfoliomodal .image-portfoliomodal img').attr('src', image);
+    $('.wrap-portfoliomodal .name-portfoliomodal').html(name);
+    $('.wrap-portfoliomodal .text-portfoliomodal p').html(text);
 
     $('.wrap-portfoliomodal').fadeIn();
-    abreMascara();
+    openMask();
 }
-$('.abrePortfolio').on('click', function(){
-    portfolio($(this).attr('data-imagem'), $(this).attr('data-nome'), $(this).attr('data-texto'));
+$('.openPortfolio').on('click', function(){
+    portfolio($(this).attr('data-image'), $(this).attr('data-name'), $(this).attr('data-text'));
 });
 
 
 
 /* ---------------------------------------------------------------------------------------
-*    Modal: Carregando
+*    Modal: Loading
 * --------------------------------------------------------------------------------------*/
-function carregar(){
-    $('#modal').attr('class','carregarmodal forcamodal');
-    $('.wrap-carregarmodal').fadeIn();
-    abreMascara();
+function loading(){
+    $('#modal').attr('class','loadingmodal forcemodal');
+    $('.wrap-loadingmodal').fadeIn();
+    openMask();
 }
 
 
@@ -144,8 +138,8 @@ function carregar(){
 * --------------------------------------------------------------------------------------*/
 $(document).keyup(function(e) {
     if (e.keyCode == 27) {
-        if (!$(".forcamodal")[0]){
-            fechaModal();
+        if (!$(".forcemodal")[0]){
+            closeModal();
         }
     }
 });
@@ -157,10 +151,9 @@ $(document).keyup(function(e) {
 * --------------------------------------------------------------------------------------*/
 function menuMobile(){
     $('#modal').attr('class','menumodal');
-    $('.wrap-menumodal').addClass('centraliza-modal');
     $('.wrap-menumodal').fadeIn();
-    $('.cabecalho').css('z-index','15');
-    abreMascara();
+    $('.header').css('z-index','15');
+    openMask();
 }
 
 

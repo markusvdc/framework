@@ -494,7 +494,7 @@ input::placeholder, textarea::placeholder {
     width: 100%;
   }
 }
-@keyframes girar {
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -502,7 +502,7 @@ input::placeholder, textarea::placeholder {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes girar {
+@-webkit-keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -520,123 +520,125 @@ input::placeholder, textarea::placeholder {
   display: none;
   overflow-y: auto;
   overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
 }
 #modal .wrap-modal {
   display: none;
 }
-#modal .fechar-modal {
+#modal .close-modal {
   position: absolute;
   cursor: pointer;
   background: transparent;
   z-index: 2;
   text-align: center;
 }
-#modal.forcamodal .fechar-modal {
+#modal.forcemodal .close-modal {
   display: none;
 }
-#modal.imagemmodal {
+#modal.image-modal {
   text-align: center;
 }
-#modal.carregarmodal .icone-carregarmodal {
+#modal.loadingmodal .icon-loadingmodal {
   position: absolute;
   top: 50%;
   left: 50%;
-  animation: girar 1s linear infinite;
+  animation: rotate 1s linear infinite;
   border-radius: 50%;
 }
-#modal .texto-modal {
+#modal .text-modal {
   overflow: hidden;
   text-align: center;
 }
-#modal .texto-modal p {
+#modal .text-modal p {
   vertical-align: middle;
   text-align: left;
   display: inline-block;
 }
 @media (max-width: 499px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     text-align: center;
     display: block;
     margin-top: 15px;
   }
 }
 @media (min-width: 500px) and (max-width: 749px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     width: 400px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     max-width: 580px;
   }
 }
 @media (min-width: 990px) and (max-width: 1399px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     max-width: 880px;
   }
 }
 @media (min-width: 1400px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     max-width: 1070px;
   }
 }
-#modal .texto-modal .icone-texto-modal {
+#modal .text-modal .icon-text-modal {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
 }
 @media (max-width: 499px) {
-  #modal .texto-modal .icone-texto-modal {
+  #modal .text-modal .icon-text-modal {
     text-align: center;
   }
 }
 @media (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  #modal .texto-modal .icone-texto-modal {
+  #modal .text-modal .icon-text-modal {
     width: 60px;
   }
 }
 @media (min-width: 1400px) {
-  #modal .texto-modal .icone-texto-modal {
+  #modal .text-modal .icon-text-modal {
     width: 70px;
   }
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  #modal .texto-modal .icone-texto-modal svg {
+  #modal .text-modal .icon-text-modal svg {
     width: 35px;
     height: 35px;
   }
 }
 @media (min-width: 1400px) {
-  #modal .texto-modal .icone-texto-modal svg {
+  #modal .text-modal .icon-text-modal svg {
     width: 37px;
     height: 37px;
   }
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  #modal.imagemmodal .legenda-imagemmodal p {
+  #modal.image-modal .label-image-modal p {
     padding-top: 10px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  #modal.imagemmodal .legenda-imagemmodal p {
+  #modal.image-modal .label-image-modal p {
     padding-top: 20px;
   }
 }
-#modal.mensagemmodal .botao-mensagemmodal {
+#modal.messagemodal .button-messagemodal {
   text-align: center;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  #modal.mensagemmodal .botao-mensagemmodal {
+  #modal.messagemodal .button-messagemodal {
     margin-top: 10px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  #modal.mensagemmodal .botao-mensagemmodal {
+  #modal.messagemodal .button-messagemodal {
     margin-top: 20px;
   }
 }
 
-.mascara {
+.mask {
   z-index: 10;
   position: fixed;
   top: 0;
@@ -646,11 +648,11 @@ input::placeholder, textarea::placeholder {
   display: none;
 }
 
-body.mascaraaberta {
+body.maskopen {
   overflow: hidden;
 }
 @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  body.mascaraaberta {
+  body.maskopen {
     padding-right: 15px;
   }
 }
@@ -762,7 +764,7 @@ body.mascaraaberta {
     padding-top: 160px;
   }
 }
-#mmodal.ativo {
+#mmodal.active {
   right: 0;
 }
 #mmodal .menu-mmodal {
@@ -942,7 +944,7 @@ body.mascaraaberta {
   #mmenu {
     width: 30px;
     height: 20px;
-    right: 15px;
+    right: 20px;
     top: 17px;
   }
 }
@@ -1011,68 +1013,68 @@ body.mascaraaberta {
     top: 20px;
   }
 }
-#mmenu.ativo span:nth-child(1) {
+#mmenu.active span:nth-child(1) {
   width: 0%;
   left: 50%;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-  #mmenu.ativo span:nth-child(1) {
+  #mmenu.active span:nth-child(1) {
     top: 15px;
   }
 }
 @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  #mmenu.ativo span:nth-child(1) {
+  #mmenu.active span:nth-child(1) {
     top: 18px;
   }
 }
-#mmenu.ativo span:nth-child(2) {
+#mmenu.active span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-#mmenu.ativo span:nth-child(3) {
+#mmenu.active span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-#mmenu.ativo span:nth-child(4) {
+#mmenu.active span:nth-child(4) {
   width: 0%;
   left: 50%;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-  #mmenu.ativo span:nth-child(4) {
+  #mmenu.active span:nth-child(4) {
     top: 15px;
   }
 }
 @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  #mmenu.ativo span:nth-child(4) {
+  #mmenu.active span:nth-child(4) {
     top: 18px;
   }
 }
 
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  .campos .grupo-campos {
+  .fields .group-fields {
     margin-bottom: 10px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  .campos .grupo-campos {
+  .fields .group-fields {
     margin-bottom: 15px;
   }
 }
 @media (min-width: 1400px) {
-  .campos .grupo-campos {
+  .fields .group-fields {
     margin-bottom: 20px;
   }
 }
-.campos .grupo-campos:last-child {
+.fields .group-fields:last-child {
   margin-bottom: 0;
 }
-.campos .grupo-campos.erro .inputtext {
+.fields .group-fields.error .inputtext {
   border-color: #ff6961;
 }
 
@@ -1107,7 +1109,7 @@ body.mascaraaberta {
 .select .campo-select .seta-campo-select svg {
   position: absolute;
 }
-.select.inativo {
+.select.inactive {
   -webkit-opacity: 0.5;
   -ms-opacity: 0.5;
   -moz-opacity: 0.5;
@@ -1115,25 +1117,25 @@ body.mascaraaberta {
   opacity: 0.5;
 }
 
-.introformulario .select {
+.introformulary .select {
   width: 300px;
 }
-.introformulario .select .campo-select .seta-campo-select {
+.introformulary .select .campo-select .seta-campo-select {
   width: 50px;
   right: 0;
   top: 0;
   bottom: 0;
 }
-.introformulario .select .campo-select .seta-campo-select svg {
+.introformulary .select .campo-select .seta-campo-select svg {
   width: 15px;
   height: 9px;
   top: 20px;
   right: 17px;
 }
-.introformulario .select .campo-select .seta-campo-select svg path {
+.introformulary .select .campo-select .seta-campo-select svg path {
   fill: #fd4577;
 }
-.introformulario .select.placeholder .campo-select {
+.introformulary .select.placeholder .campo-select {
   color: #BBB;
 }
 
@@ -1157,21 +1159,21 @@ body.mascaraaberta {
 .inputcheck .item-inputcheck input {
   display: none;
 }
-.inputcheck.erro .titulo-inputcheck {
+.inputcheck.error .titulo-inputcheck {
   color: #ff6961;
 }
 
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-  .introformulario .inputcheck .item-inputcheck {
+  .introformulary .inputcheck .item-inputcheck {
     padding: 10px 0;
   }
 }
 @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  .introformulario .inputcheck .item-inputcheck {
+  .introformulary .inputcheck .item-inputcheck {
     padding: 5px 0;
   }
 }
-.introformulario .inputcheck .item-inputcheck b {
+.introformulary .inputcheck .item-inputcheck b {
   background: transparent;
   border-width: 2px;
   width: 12px;
@@ -1179,22 +1181,22 @@ body.mascaraaberta {
   border-color: #fd4577;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-  .introformulario .inputcheck .item-inputcheck b {
+  .introformulary .inputcheck .item-inputcheck b {
     top: 11px;
   }
 }
 @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  .introformulario .inputcheck .item-inputcheck b {
+  .introformulary .inputcheck .item-inputcheck b {
     top: 8px;
   }
 }
-.introformulario .inputcheck .item-inputcheck span {
+.introformulary .inputcheck .item-inputcheck span {
   padding-left: 30px;
   font-size: 18px;
   line-height: 22px;
   color: #555;
 }
-.introformulario .inputcheck .item-inputcheck.ativo b {
+.introformulary .inputcheck .item-inputcheck.active b {
   background: #fd4577;
 }
 
@@ -1223,20 +1225,20 @@ body.mascaraaberta {
 }
 
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px) {
-  .introformulario .inputradio .item-inputradio {
+  .introformulary .inputradio .item-inputradio {
     padding: 10px 0;
   }
 }
 @media (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
-  .introformulario .inputradio .item-inputradio {
+  .introformulary .inputradio .item-inputradio {
     padding: 5px 0;
   }
 }
-.introformulario .inputradio .item-inputradio label {
+.introformulary .inputradio .item-inputradio label {
   position: relative;
   cursor: pointer;
 }
-.introformulario .inputradio .item-inputradio b {
+.introformulary .inputradio .item-inputradio b {
   -webkit-border-radius: 50%;
   -ms-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1256,29 +1258,29 @@ body.mascaraaberta {
   left: 0;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px), (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  .introformulario .inputradio .item-inputradio b {
+  .introformulary .inputradio .item-inputradio b {
     top: 8px;
   }
 }
 @media (min-width: 1400px) {
-  .introformulario .inputradio .item-inputradio b {
+  .introformulary .inputradio .item-inputradio b {
     top: 5px;
   }
 }
-.introformulario .inputradio .item-inputradio b.ativo {
+.introformulary .inputradio .item-inputradio b.active {
   background: #0d4b8a;
 }
-.introformulario .inputradio .item-inputradio span {
+.introformulary .inputradio .item-inputradio span {
   padding-left: 30px;
 }
-.introformulario .inputradio .item-inputradio input {
+.introformulary .inputradio .item-inputradio input {
   display: none;
 }
 
 .inputtext {
   width: 100%;
 }
-.inputtext:disabled, .inputtext.inativo {
+.inputtext:disabled, .inputtext.inactive {
   -webkit-opacity: 0.5;
   -ms-opacity: 0.5;
   -moz-opacity: 0.5;
@@ -1286,7 +1288,7 @@ body.mascaraaberta {
   opacity: 0.5;
 }
 
-.introformulario .inputtext {
+.introformulary .inputtext {
   -webkit-border-radius: 15px;
   -ms-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -1300,40 +1302,40 @@ body.mascaraaberta {
   line-height: 1.4;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  .introformulario .inputtext {
+  .introformulary .inputtext {
     border-width: 2px;
     font-size: 14px;
     padding: 11px 18px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  .introformulario .inputtext {
+  .introformulary .inputtext {
     border-width: 2px;
     font-size: 14px;
     padding: 11px 18px;
   }
 }
 @media (min-width: 1400px) {
-  .introformulario .inputtext {
+  .introformulary .inputtext {
     border-width: 2px;
     font-size: 16px;
     padding: 13px 20px;
   }
 }
 
-.introformulario ::-webkit-input-placeholder {
+.introformulary ::-webkit-input-placeholder {
   color: #BBB;
   font-family: "DowCorporate", Arial;
 }
-.introformulario ::-moz-input-placeholder {
+.introformulary ::-moz-input-placeholder {
   color: #BBB;
   font-family: "DowCorporate", Arial;
 }
-.introformulario ::-ms-input-placeholder {
+.introformulary ::-ms-input-placeholder {
   color: #BBB;
   font-family: "DowCorporate", Arial;
 }
-.introformulario ::-o-input-placeholder {
+.introformulary ::-o-input-placeholder {
   color: #BBB;
   font-family: "DowCorporate", Arial;
 }
@@ -1416,19 +1418,19 @@ body.mascaraaberta {
   vertical-align: middle;
 }
 
-.videoresponsivo {
+.videoresponsive {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
 }
-.videoresponsivo iframe {
+.videoresponsive iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.videoresponsivo img {
+.videoresponsive img {
   width: 100%;
 }
 
@@ -1441,7 +1443,7 @@ strong {
   font-weight: 600;
 }
 
-#modal.carregarmodal .icone-carregarmodal {
+#modal.loadingmodal .icon-loadingmodal {
   width: 60px;
   height: 60px;
   margin-top: -30px;
@@ -1449,50 +1451,52 @@ strong {
   border-top: 4px solid #FFF;
   border-right: 4px solid transparent;
 }
-#modal .fechar-modal {
+#modal .close-modal {
   line-height: 0;
+  top: 30px;
+  right: 30px;
 }
-@media (min-width: 1400px) {
-  #modal .fechar-modal {
-    top: 30px;
-    right: 30px;
+@media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
+  #modal .close-modal svg {
+    width: 36px;
+    height: 36px;
   }
 }
-@media (min-width: 1400px) {
-  #modal .fechar-modal svg {
+@media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px), (min-width: 1400px) {
+  #modal .close-modal svg {
     width: 44px;
     height: 44px;
   }
 }
-#modal .fechar-modal svg path, #modal .fechar-modal svg polygon {
+#modal .close-modal svg path, #modal .close-modal svg polygon {
   fill: #FFF;
 }
-#modal .texto-modal p {
+#modal .text-modal p {
   color: #FFF;
 }
 @media (max-width: 499px), (min-width: 500px) and (max-width: 749px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     font-size: 20px;
     line-height: 26px;
   }
 }
 @media (min-width: 750px) and (max-width: 989px), (min-width: 990px) and (max-width: 1399px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     font-size: 24px;
     line-height: 32px;
   }
 }
 @media (min-width: 1400px) {
-  #modal .texto-modal p {
+  #modal .text-modal p {
     font-size: 26px;
     line-height: 34px;
   }
 }
-#modal .texto-modal .icone-texto-modal svg path, #modal .texto-modal .icone-texto-modal svg polygon, #modal .texto-modal .icone-texto-modal svg rect {
+#modal .text-modal .icon-text-modal svg path, #modal .text-modal .icon-text-modal svg polygon, #modal .text-modal .icon-text-modal svg rect {
   fill: #FFF;
 }
 
-.mascara {
+.mask {
   background: rgba(0, 0, 0, 0.6);
 }
 

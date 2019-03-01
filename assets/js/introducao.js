@@ -45,6 +45,6 @@ $(window).on('load', function(){
             }
 
         });
-        abreMascara();
+        openMask();
     });
 });

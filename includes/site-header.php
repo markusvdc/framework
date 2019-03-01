@@ -1,35 +1,35 @@
-<div class="inicio">
-    <div class="wrap-inicio">
+<div class="first">
+    <div class="wrap-first">
     </div>
 </div>
-<div class="logo-inicio">
+<div class="logo-first">
     <?= file_get_contents('assets/img/logo.svg') ?>
 </div>
-<span class="icone-inicio"></span>
+<span class="icon-first"></span>
 <button id="mmenu">
     <span></span><span></span><span></span><span></span>
 </button>
-<header class="cabecalho">
+<header class="header">
     <div class="container">
-        <a href="." class="logo-cabecalho">
+        <a href="." class="logo-header">
             <?= file_get_contents('assets/img/logo.svg') ?>
         </a>
-        <div class="social-cabecalho">
+        <div class="social-header">
             <?php include 'site-social.php';?>
         </div>
-        <nav class="menu-cabecalho">
+        <nav class="menu-header">
             <?php include 'site-menu.php';?>
         </nav>
     </div>
 </header>
-<header class="mcabecalho">
+<header class="mheader">
     <div class="container">
-        <a href="." class="logo-cabecalho">
+        <a href="." class="logo-header">
             <?= file_get_contents('assets/img/logo.svg') ?>
         </a>
     </div>
 </header>
 
-<!-- <header class="hcabecalho">
+<!-- <header class="hheader">
     <div class="container"></div>
 </header> -->
